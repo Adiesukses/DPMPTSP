@@ -1,5 +1,5 @@
 
-                <form id="ikiubah" action="{{ ('/update'.$ikilodatane->id) }}" method="POST">
+                <form id="ikiubah" action="{{ url('update/'.$ikilodatane->id) }}" method="POST">
                     @csrf
                     <div class="form-group ml-4 mt-3">
                         <label>NAMA</label>

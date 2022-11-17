@@ -38,8 +38,8 @@ Route::get('/Form_Tambah', [controller_nominatif::class,'Nom_Tambah']);
 Route::post('/tambahpeg', [controller_nominatif::class,'tambahpeg']);
 //----------------------------------------------------------------------
 //Route Edit Data
-Route::get('/Nom_Edit{id}', [controller_nominatif::class,'Nom_Edit']);
-Route::post('/update{id}', [controller_nominatif::class,'update']);
+Route::get('/Nom_Edit/{id}', [controller_nominatif::class,'Nom_Edit']);
+Route::post('/update/{id}', [controller_nominatif::class,'update']);
 //-----------------------------------------------------------------------
 //Route Delete Data
 Route::get('/delete{id}', [controller_nominatif::class,'delete']);
