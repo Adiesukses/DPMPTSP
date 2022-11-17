@@ -31,6 +31,17 @@ class controller_sppdkadin extends Controller
         //         ]);
         // return $pdf->stream();
     }
+    public function cetak2($id)
+    {
+        $data=model_sppdkadin::findorfail($id);
+        return view('Kadin_SPPD_Cetak2')->with([
+            'data' => $data
+            ]);
+        //     $pdf = Pdf::loadView('Kadin_SPPD_Cetak', [
+        //         'data' => $data
+        //         ]);
+        // return $pdf->stream();
+    }
     /**
      * Show the form for creating a new resource.
      *
