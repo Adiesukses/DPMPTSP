@@ -53,7 +53,7 @@
                         <td>{{ date('d F Y',strtotime($sppd->tanggal_berangkat)) }}</td>
                         <td>{{ date('d F Y',strtotime($sppd->tanggal_kembali)) }}</td>
                         <td class="col-2 " align = "justify">{{ $sppd->tujuan }}</td>
-                        <td class="col-2 ">{{ $sppd->maksud }}</td>
+                        <td class="col-2 "align = "justify">{{ $sppd->maksud }}</td>
      
                         <td class="project-actions">
                           <a class="btn btn-success btn-sm "href="{{ url('kadinsppdctk/'.$sppd->id) }}" target="blank">
