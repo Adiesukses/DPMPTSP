@@ -300,6 +300,9 @@
       </tr>
     </table></td>
   </tr>
+  <script type="text/javascript">
+  window.print();
+</script>
 </table>
 </body>
 </html>
