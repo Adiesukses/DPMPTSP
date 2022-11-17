@@ -32,7 +32,7 @@
         <td>&nbsp;</td>
         <td><span class="style6">Pada tanggal</span></td>
         <td><span class="style6">:</span></td>
-        <td>{{ $data->tanggal_berangkat }}</td>
+        <td>{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
       </tr>
       <tr>
         <td width="405">&nbsp;</td>
@@ -82,7 +82,7 @@
         <td><span class="style6"></span></td>
         <td><span class="style6">Pada Tanggal</span></td>
         <td class="style6">:</td>
-        <td>{{ $data->tanggal_berangkat }}</td>
+        <td>{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -99,14 +99,14 @@
     </table></td>
     <td width="410" valign="top"><table width="405" border="0">
       <tr>
-        <td width="120"><span class="style6">Berangkat dari</span></td>
+        <td width="120" valign="top"><span class="style6">Berangkat dari</span></td>
         <td width="10" valign="top" class="style6">:</td>
-        <td width="263">{{ $data->tujuan }}</td>
+        <td width="263" valign="top">{{ $data->tujuan }}</td>
       </tr>
       <tr>
         <td><span class="style6">Pada Tanggal</span></td>
         <td class="style6">:</td>
-        <td>&nbsp;</td>
+        <td>{{ date('d F Y',strtotime($data->tanggal_kembali)) }}</td>
       </tr>
       <tr>
         <td><span class="style6">Ke</span></td>
