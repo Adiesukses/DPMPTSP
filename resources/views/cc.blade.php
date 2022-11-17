@@ -52,8 +52,7 @@
     <div class="small-box bg-danger">
       <div class="inner">
         <h3>65</h3>
-
-        nnnjkghffytfytfyfty
+nanananaandina
 <p>Unique Visitors</p>
       </div>
       <div class="icon">
