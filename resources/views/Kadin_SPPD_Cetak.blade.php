@@ -68,7 +68,7 @@
 <body>
 <table width="831" border="0">
   <tr>
-    <td width="100" rowspan="3" valign="top"><div align="center"><img src="{{ 'img/logo.png' }}" width="94" height="106" /></div></td>
+    <td width="100" rowspan="3" valign="top"><div align="center"><img src="{{ url('img/logo.png') }}" width="94" height="106" /></div></td>
     <td width="618" valign="bottom"><div align="center"><span class="style1">PEMERINTAH KABUPATEN PURWOREJO</span></div></td>
     <td width="99" valign="bottom"><div align="center"></div></td>
   </tr>
@@ -84,7 +84,7 @@
 
 <table width="831" border="0">
   <tr>
-    <td width="823" height="1"><img src="{{ 'img/LINE.png' }}" width="820" height="4" /></td>
+    <td width="823" height="1"><img src="{{ url('img/LINE.png') }}" width="820" height="4" /></td>
   </tr>
 </table>
 <table width="831" border="0">
