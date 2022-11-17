@@ -13,9 +13,9 @@
 </head>
 
 <body>
-<table width="831" height="1361" border="3" bordercolor="#000000">
+<table width="831" height="1324" border="3" bordercolor="#000000">
   <tr>
-    <td height="165" colspan="2"><table width="820" border="0">
+    <td height="313" colspan="2"><table width="820" border="0">
       <tr>
         <td>&nbsp;</td>
         <td><span class="style6">SPPD No</span></td>
@@ -49,7 +49,7 @@
         <td colspan="3" valign="top" class="style6"><div align="center">Pejabat Pelaksana Teknis Kegiatan</div></td>
       </tr>
       <tr>
-        <td height="55">&nbsp;</td>
+        <td height="44">&nbsp;</td>
         <td colspan="3">&nbsp;</td>
         </tr>
       <tr>
@@ -71,12 +71,12 @@
     </table></td>
   </tr>
   <tr>
-    <td width="405" height="206" valign="top"><table width="405" border="0">
+    <td width="405" height="181" valign="top"><table width="405" border="0">
       <tr>
-        <td width="23"><span class="style6">II.</span></td>
-        <td width="129"><span class="style6">Tiba di</span></td>
-        <td width="10" class="style6">:</td>
-        <td width="225">{{ $data->tujuan }}</td>
+        <td width="23" valign="top"><span class="style6">II.</span></td>
+        <td width="129" valign="top"><span class="style6">Tiba di</span></td>
+        <td width="10" valign="top" class="style6">:</td>
+        <td width="225" valign="top">{{ $data->tujuan }}</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -121,7 +121,7 @@
     </table></td>
   </tr>
   <tr>
-    <td height="200" valign="top"><table width="405" border="0">
+    <td height="180" valign="top"><table width="405" border="0">
       <tr>
         <td width="23"><span class="style6">III.</span></td>
         <td width="129"><span class="style6">Tiba di</span></td>
@@ -171,7 +171,7 @@
     </table></td>
   </tr>
   <tr>
-    <td height="190" valign="top"><table width="405" border="0">
+    <td height="172" valign="top"><table width="405" border="0">
       <tr>
         <td width="23"><span class="style6">IV.</span></td>
         <td width="129"><span class="style6">Tiba di</span></td>
@@ -288,7 +288,7 @@
     <td height="35" colspan="2" valign="top"><table width="822" border="0">
       <tr>
         <td width="28" class="style6"><span class="style9">VI.</span></td>
-        <td width="784" height="27" class="style6"><span class="style9">CATATAN LAIN - LAIN</span></td>
+        <td width="784" height="22" class="style6"><span class="style9">CATATAN LAIN - LAIN</span></td>
       </tr>
     </table></td>
   </tr>
