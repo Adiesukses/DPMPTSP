@@ -60,7 +60,7 @@
                               <i class="fas fa-print"> 1
                               </i>
                           </a>
-                          <a class="btn btn-success btn-sm "{{ ('/kadinsppdctk2'/$sppd->id) }}" target="blank">
+                          <a class="btn btn-success btn-sm "href="{{ url('kadinsppdctk2/'.$sppd->id) }}" target="blank">
                             <i class="fas fa-print"> 2
                             </i>
                         </a>

@@ -32,13 +32,13 @@
         <td>&nbsp;</td>
         <td><span class="style6">Pada tanggal</span></td>
         <td><span class="style6">:</span></td>
-        <td>&nbsp;</td>
+        <td>{{ $data->tanggal_berangkat }}</td>
       </tr>
       <tr>
         <td width="405">&nbsp;</td>
         <td width="137"><span class="style6">Ke</span></td>
         <td width="15"><span class="style6">:</span></td>
-        <td width="245">&nbsp;</td>
+        <td width="245">{{ $data->tujuan }}</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -76,13 +76,13 @@
         <td width="23"><span class="style6">II.</span></td>
         <td width="129"><span class="style6">Tiba di</span></td>
         <td width="10" class="style6">:</td>
-        <td width="225">&nbsp;</td>
+        <td width="225">{{ $data->tujuan }}</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
         <td><span class="style6">Pada Tanggal</span></td>
         <td class="style6">:</td>
-        <td>&nbsp;</td>
+        <td>{{ $data->tanggal_berangkat }}</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -99,9 +99,9 @@
     </table></td>
     <td width="410" valign="top"><table width="405" border="0">
       <tr>
-        <td width="120"><span class="style6">Tiba di</span></td>
-        <td width="10" class="style6">:</td>
-        <td width="263">&nbsp;</td>
+        <td width="120"><span class="style6">Berangkat dari</span></td>
+        <td width="10" valign="top" class="style6">:</td>
+        <td width="263">{{ $data->tujuan }}</td>
       </tr>
       <tr>
         <td><span class="style6">Pada Tanggal</span></td>
