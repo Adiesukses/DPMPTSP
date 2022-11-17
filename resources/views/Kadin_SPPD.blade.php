@@ -56,7 +56,7 @@
                         <td class="col-2 ">{{ $sppd->maksud }}</td>
      
                         <td class="project-actions">
-                          <a class="btn btn-success btn-sm "href="{{ ('/kadinsppdctk'.$sppd->id) }}" target="blank">
+                          <a class="btn btn-success btn-sm "href="{{ url('kadinsppdctk/'.$sppd->id) }}" target="blank">
                               <i class="fas fa-print"> 1
                               </i>
                           </a>
