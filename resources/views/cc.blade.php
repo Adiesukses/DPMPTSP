@@ -52,7 +52,7 @@
     <div class="small-box bg-danger">
       <div class="inner">
         <h3>65</h3>
-nanananaandina
+dina i love u
 <p>Unique Visitors</p>
       </div>
       <div class="icon">
