@@ -18,7 +18,7 @@
  
             </div>
                   <br>
-                  <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</button>
+                  <button href ="{{ url('kadinsppd/create') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</button>
                   <button type="button" class="btn btn-SUCCESS mt-3" data-toggle="modal" data-target="#modal-rek">+ Tambah Rekening</button>
 
           </div>
@@ -31,7 +31,7 @@
                     <tr>
 
                         <th>NO</th>
-                        <th >NAMA PEGAWAI</th>
+                        <th >NAMA PENGIKUT</th>
                         <th >TANGGAL</th>
                         <th >BERANGKAT</th>
                         <th>KEMBALI </th>
@@ -100,7 +100,7 @@
                   <div class="row">
                     <div class="col">
                       <label>NAMA</label>
-                      <input name="nama" type="text" class="form-control" value=" AGUNG WIBOWO, AP., MM" required>
+                      <input name="nama" type="text" class="form-control" value=" MADA BAYU AJI" required>
                     </div>
                     
                     <div class="col">
@@ -164,12 +164,11 @@
                       <div class="col">
                         <label>KODE MATA ANGGARAN</label>
                         <select name="anggaran" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                            @foreach ($positions as $position)
-                               <option value="{{ $position->id }}">{{ $position->kode_angaran }}</option>
-                            @endforeach
-                         </select>
+                          <option selected="selected" data-select2-id="3">- Pilih -</option>
+                 
+                    
                 
-                          
+
                         </select>
                       </div>
                     </div>

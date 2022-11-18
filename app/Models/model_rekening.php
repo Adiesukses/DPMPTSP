@@ -10,11 +10,8 @@ class model_rekening extends Model
     use HasFactory;
     protected $table='rekening';
     protected $fillable=[
-    'kode_angaran',
-    ];
-    public function user()
-    {
+    'kode_angaran'
 
-        return $this->hasMany(User::class);
-    }
+
+    ];
 }
