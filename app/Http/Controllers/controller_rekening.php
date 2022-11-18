@@ -28,10 +28,14 @@ class controller_rekening extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
 
+    {
+
+        $positions = model_rekening::all();
+        return view('/kadinsppd', compact('positions'));
+
+
+}
     /**
      * Store a newly created resource in storage.
      *
