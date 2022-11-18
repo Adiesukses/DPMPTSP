@@ -18,7 +18,7 @@
  
             </div>
                   <br>
-                  <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</button>
+                  <button href ="{{ url('kadinsppd/create') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</button>
                   <button type="button" class="btn btn-SUCCESS mt-3" data-toggle="modal" data-target="#modal-rek">+ Tambah Rekening</button>
 
           </div>
@@ -164,9 +164,11 @@
                       <div class="col">
                         <label>KODE MATA ANGGARAN</label>
                         <select name="anggaran" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                          @foreach($data as $sel)
-                             <option selected="selected" data-select2-id="3">{{ $sel->kode_angaran }}</option>
-                          @endforeach
+                       @foreach ($data as $zz)
+                           <option value="{{ $zz->id }}">{{ $zz->kode_angaran }}</option>
+                       @endforeach
+                             
+                
 
                         </select>
                       </div>

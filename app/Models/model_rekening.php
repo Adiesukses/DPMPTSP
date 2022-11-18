@@ -12,6 +12,10 @@ class model_rekening extends Model
     protected $fillable=[
     'kode_angaran'
 
-
     ];
+     public function user()
+    {
+
+        return $this->hasMany(User::class);
+    }
 }

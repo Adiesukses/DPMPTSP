@@ -29,10 +29,8 @@ class controller_rekening extends Controller
      */
     public function create()
     {
-        $data1 = model_rekening::all();
-        return view('Kadin_SPPD')->with([
-            'data1' => $data1
-        ]);
+        $positions = model_rekening::all();
+        return view('user.kadinsppd', compact('positions'));
     }
 
     /**
