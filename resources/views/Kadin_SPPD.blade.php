@@ -164,7 +164,11 @@
                       <div class="col">
                         <label>KODE MATA ANGGARAN</label>
                         <select name="anggaran" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                          <option selected="selected" data-select2-id="3">- Pilih -</option>
+                         @foreach ($dina as $nana)
+                            <option value="{{ $nana->id }}">- Pilih -</option>
+                            <option value="">{{ $nana->kode_angaran }}</option>
+                         @endforeach
+                          
                  
                     
                 
