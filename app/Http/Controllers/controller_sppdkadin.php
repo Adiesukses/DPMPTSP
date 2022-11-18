@@ -17,8 +17,10 @@ class controller_sppdkadin extends Controller
     public function index()
     {
         $data = model_sppdkadin::all();
+        $dina=model_rekening::all();
         return view('Kadin_SPPD')->with([
-            'data' => $data
+            'data' => $data,
+            'dina'=>$dina
         ]);
 
     }
@@ -30,8 +32,8 @@ class controller_sppdkadin extends Controller
      */
     public function create()
     {
-        $dina=model_rekening::all();
-        return view('kadin_sppd', compact('dina'));
+        // $dina=model_rekening::all();
+        // return view('kadin_sppd', compact('dina'));
     }
 
     /**
