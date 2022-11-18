@@ -164,11 +164,10 @@
                       <div class="col">
                         <label>KODE MATA ANGGARAN</label>
                         <select name="anggaran" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                          <option selected="selected" data-select2-id="3">- Pilih -</option>
-                 
-                    
-                
-                          
+                          @foreach($data as $sel)
+                             <option selected="selected" data-select2-id="3">{{ $sel->kode_angaran }}</option>
+                          @endforeach
+
                         </select>
                       </div>
                     </div>
