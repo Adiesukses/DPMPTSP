@@ -20,10 +20,7 @@ class controller_sppdkadin extends Controller
         return view('Kadin_SPPD')->with([
             'data' => $data
         ]);
-        $dina=model_rekening::all();
-        return view('/Kadin_SPPD', compact('dina'))->with([
-            'dina' => $dina
-        ]);
+
     }
     public function cetak($id)
     {
