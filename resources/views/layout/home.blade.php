@@ -64,7 +64,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/cb') }}" class="nav-link">
+                <a href="{{ url('kadinsppd') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>SPPD</p>
                 </a>

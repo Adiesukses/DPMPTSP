@@ -6,9 +6,5 @@
       <option value="">{{ $nana->kode_angaran }}</option>
    @endforeach
   
-
-
-
-
-  </select>
+ </select>
 </div>
