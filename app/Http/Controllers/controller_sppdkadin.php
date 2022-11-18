@@ -31,7 +31,7 @@ class controller_sppdkadin extends Controller
     public function create()
     {
         $dina=model_rekening::all();
-        return view('cc', compact('dina'));
+        return view('kadin_sppd', compact('dina'));
     }
 
     /**
