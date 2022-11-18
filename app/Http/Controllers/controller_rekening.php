@@ -29,8 +29,7 @@ class controller_rekening extends Controller
      */
     public function create()
     {
-        $positions = model_rekening::all();
-        return view('user.kadinsppd', compact('positions'));
+
     }
 
     /**
