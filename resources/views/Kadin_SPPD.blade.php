@@ -18,7 +18,7 @@
  
             </div>
                   <br>
-                  <button href ="{{ url('kadinsppd/create') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</button>
+                  <a href ="{{ url('kadinsppd2') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</a>
                   <button type="button" class="btn btn-SUCCESS mt-3" data-toggle="modal" data-target="#modal-rek">+ Tambah Rekening</button>
 
           </div>
@@ -163,15 +163,11 @@
                       </div>
                       <div class="col">
                         <label>KODE MATA ANGGARAN</label>
-                        <select name="anggaran" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                          @foreach ($data as $nana)
-                            <option value="">- Pilih -</option>
+                        <select name="anggaran" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
+                          <option value="">- Pilih -</option> 
+                          @foreach ($dina as $nana)
                             <option value="">{{ $nana->kode_angaran }}</option>
                          @endforeach
-                        
-                 
-                    
-                
 
                         </select>
                       </div>
