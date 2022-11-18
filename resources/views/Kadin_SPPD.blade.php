@@ -31,7 +31,7 @@
                     <tr>
 
                         <th>NO</th>
-                        <th >NAMA PEGAWAI</th>
+                        <th >NAMA PENGIKUT</th>
                         <th >TANGGAL</th>
                         <th >BERANGKAT</th>
                         <th>KEMBALI </th>
@@ -100,7 +100,7 @@
                   <div class="row">
                     <div class="col">
                       <label>NAMA</label>
-                      <input name="nama" type="text" class="form-control" value=" AGUNG WIBOWO, AP., MM" required>
+                      <input name="nama" type="text" class="form-control" value=" MADA BAYU AJI" required>
                     </div>
                     
                     <div class="col">

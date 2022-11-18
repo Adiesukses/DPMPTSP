@@ -221,7 +221,7 @@
     <td valign="top" class="style6"><span class="style6">8.</span></td>
     <td colspan="2" valign="top" class="style6"><span class="style6">Pengikut</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6"><span class="style6"></span></td>
+    <td valign="top" class="style6"><span class="style6">{{ $data->nama }}</span></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
