@@ -10,7 +10,8 @@ class model_rekening extends Model
     use HasFactory;
     protected $table='rekening';
     protected $fillable=[
-    'kode_angaran'
+    'kode_angaran',
+    'pegawai',
 
 
     ];

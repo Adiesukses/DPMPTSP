@@ -99,12 +99,12 @@
                   @csrf
                   <div class="row">
                     <div class="col">
-                      <label>NAMA</label>
+                      <label>PENGIKUT</label>
                       <input name="nama" type="text" class="form-control" value=" MADA BAYU AJI" required>
                     </div>
                     
                     <div class="col">
-                      <label>TANGGAL</label>
+                      <label>TANGGAL SPPD</label>
                        <input name="tanggal_sppd" type="date" class="form-control" required>
                     </div>
                   </div>
@@ -168,8 +168,8 @@
                           @foreach ($dina as $nana)
                             <option value="{{ $nana->kode_angaran }}">{{ $nana->kode_angaran }}</option>
                          @endforeach
-
                         </select>
+
                       </div>
                     </div>
                     <BR>
@@ -205,15 +205,25 @@
                 <form action="{{ ('/tambahrek') }}" method="POST">
                   @csrf
                   <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-lg-12">
                     <textarea name="kode_angaran"class="form-control"></textarea>
-
-                    </div>
                     
-                        <div class="col">
-                          <label></label>
-                          <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
-                        </div>
+
+                                     
+                      <label>PPTK</label>
+                      <select name="pegawa" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
+                        <option value="">- Pilih -</option> 
+                        @foreach ($dina as $nana)
+                          <option value="{{ $nana->pegawai }}">{{ $nana->kode_angaran }}</option>
+                       @endforeach
+                      </select>
+                       
+                        <label></label>
+                        <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
+                
+                    </div>
+                    </div>
+                  
                   
                 </form>
 

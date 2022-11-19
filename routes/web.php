@@ -16,15 +16,15 @@ use App\Http\Controllers\controller_rekening;
 */
 
 Route::get('/kadinsppd', [controller_sppdkadin::class,'index']);
-Route::get('/kadinsppd2', [controller_sppdkadin::class,'create']);
+Route::get('/cb', [controller_sppdkadin::class,'cc']);
 Route::get('/kadinsppdctk/{id}', [controller_sppdkadin::class,'cetak']);
 Route::get('/kadinsppdctk2/{id}', [controller_sppdkadin::class,'cetak2']);
 Route::post('/tambahsppd', [controller_sppdkadin::class,'store']);
 Route::post('/tambahrek', [controller_rekening::class,'store']);
-Route::get('/kadinsppd2', [controller_rekening::class,'create']);
-// Route::get('/cetak2', function () {
-//     return view('kadin_sppd_cetak2');
-// });
+
+Route::get('/cb', function () {
+    return view('cc');
+});
 
 
 Route::get('/',[controller_nominatif::class,'dashboard']);
