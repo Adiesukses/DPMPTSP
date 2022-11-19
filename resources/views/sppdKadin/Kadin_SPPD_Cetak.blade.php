@@ -98,7 +98,7 @@
     <td>&nbsp;</td>
     <td valign="top" class="style6"><span class="style6">Kode No</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6"><span class="style6"></span></td>
+    <td valign="top" class="style6"><span class="style6">{{ $data->anggaran }}</span></td>
   </tr>
   <tr>
     <td height="30">&nbsp;</td>

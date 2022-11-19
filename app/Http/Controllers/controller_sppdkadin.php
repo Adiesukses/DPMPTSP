@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_sppdkadin;
 use App\Models\model_rekening;
+use App\Models\model_nominatif;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class controller_sppdkadin extends Controller
@@ -18,9 +19,11 @@ class controller_sppdkadin extends Controller
     {
         $data = model_sppdkadin::all();
         $dina=model_rekening::all();
+        $nominatif=model_nominatif::all();
         return view('Kadin_SPPD')->with([
             'data' => $data,
-            'dina'=>$dina
+            'dina'=>$dina,
+            'nominatif'=>$nominatif
         ]);
 
     }

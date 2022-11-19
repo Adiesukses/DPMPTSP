@@ -117,7 +117,7 @@
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 NOMINATIF PEGAWAI
-                <span class="badge badge-info right">5</span>
+                {{-- <span class="badge badge-info right">5</span> --}}
               </p>
             </a>
           </li>
