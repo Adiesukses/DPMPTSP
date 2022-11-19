@@ -193,8 +193,7 @@
             <div class="modal-body">
                 <form action="{{ ('/tambahrek') }}" method="POST">
                     @csrf
-                    <div class="form-row">
-                        
+                    <div class="form-row">             
                         <div class="form-group col-md-12">
                             <textarea name="angaran" class="form-control"></textarea>
                         </div>
