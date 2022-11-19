@@ -20,7 +20,7 @@ class controller_sppdkadin extends Controller
         $data = model_sppdkadin::all();
         $dina=model_rekening::all();
         $nominatif=model_nominatif::all();
-        return view('Kadin_SPPD')->with([
+        return view('sppdKadin/Kadin_SPPD')->with([
             'data' => $data,
             'dina'=>$dina,
             'nominatif'=>$nominatif
@@ -99,7 +99,7 @@ class controller_sppdkadin extends Controller
     public function cetak($id)
     {
         $data=model_sppdkadin::findorfail($id);
-        return view('Kadin_SPPD_Cetak')->with([
+        return view('sppdKadin/Kadin_SPPD_Cetak')->with([
             'data' => $data
             ]);
         //     $pdf = Pdf::loadView('Kadin_SPPD_Cetak', [
@@ -110,7 +110,7 @@ class controller_sppdkadin extends Controller
     public function cetak2($id)
     {
         $data=model_sppdkadin::findorfail($id);
-        return view('Kadin_SPPD_Cetak2')->with([
+        return view('sppdKadin/Kadin_SPPD_Cetak2')->with([
             'data' => $data
             ]);
         //     $pdf = Pdf::loadView('Kadin_SPPD_Cetak', [

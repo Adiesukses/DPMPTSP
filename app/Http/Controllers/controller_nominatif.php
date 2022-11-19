@@ -15,7 +15,7 @@ class controller_nominatif extends Controller
     public function Nominatif()
     {
         $data = model_nominatif::all();
-        return view('Nominatif')->with([
+        return view('nominatif/Nominatif')->with([
             'data' => $data
         ]);
     }
@@ -27,18 +27,18 @@ class controller_nominatif extends Controller
      */
     public function Nom_Tambah()
     {
-        return view('Nom_Tambah');
+        return view('nominatif/Nom_Tambah');
     }
     public function tambahpeg(Request $request)
     {
         $data=$request->except(['_token']);
         model_nominatif::insert($data);
-        return redirect('/Nominatif')->with('message','Operation Successful !');
+        return redirect('nominatif/Nominatif')->with('message','Operation Successful !');
     }
     public function Nom_Edit($id)
     {
         $data=model_nominatif::findorfail($id);
-        return view('Nom_Edit')->with([
+        return view('nominatif/Nom_Edit')->with([
             'data' => $data
             
             ]);
@@ -48,7 +48,7 @@ class controller_nominatif extends Controller
         $item=model_nominatif::findorfail($id);
         $data=$request->except(['_token']);
         $item->update($data);
-        return redirect('/Nominatif');
+        return redirect('nominatif/Nominatif');
     }
     public function delete(Request $request, $id)
     {
@@ -69,12 +69,7 @@ class controller_nominatif extends Controller
         'data' => $data
     ]);
     }
-    public function kadin()
-    {
 
-       return view('Kadin_SPPD');
-   
-    }
     public function getData(Request $req)
     {
         $responSql = model_nominatif::findorfail($req->dataId);
@@ -82,12 +77,12 @@ class controller_nominatif extends Controller
         $data['judul'] = "SSS";
 
         //print_r($data->nama);
-        return view('nominatif_modal',$data);
+        return view('nominatif/nominatif_modal',$data);
     }
     public function listData(Request $req)
     {
         $data = model_nominatif::all();
-        return view('nominatif_list')->with([
+        return view('nominatif/nominatif_list')->with([
             'data' => $data
         ]);
     }

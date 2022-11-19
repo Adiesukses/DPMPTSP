@@ -16,7 +16,6 @@ use App\Http\Controllers\controller_rekening;
 */
 
 Route::get('/kadinsppd', [controller_sppdkadin::class,'index']);
-Route::get('/cb', [controller_sppdkadin::class,'cc']);
 Route::get('/kadinsppdctk/{id}', [controller_sppdkadin::class,'cetak']);
 Route::get('/kadinsppdctk2/{id}', [controller_sppdkadin::class,'cetak2']);
 Route::post('/tambahsppd', [controller_sppdkadin::class,'store']);

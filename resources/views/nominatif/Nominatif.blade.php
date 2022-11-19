@@ -152,7 +152,7 @@ function edit(ikiid) {
 
 function getList() {
     $.ajax({
-        url: "nominatif_list",
+        url: '/nominatif/nominatif_list',
         method: "GET",
     }).done(function (response) {
         $('#listnya').html(response);
