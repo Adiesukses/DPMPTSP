@@ -240,13 +240,13 @@
           
           <li class="nav-header">PERENCANAAN</li>
           <li class="nav-item">
-            <a href="/pro" class="nav-link">
+            <a href="/agenda" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>AGENDA</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('pro') }}" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>DOKUMEN</p>
             </a>
