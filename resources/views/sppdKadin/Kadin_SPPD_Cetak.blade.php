@@ -98,7 +98,7 @@
     <td>&nbsp;</td>
     <td valign="top" class="style6"><span class="style6">Kode No</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6"><span class="style6">{{ $data->anggaran }}</span></td>
+    <td valign="top" class="style6">5.1.02.04.01.0001</td>
   </tr>
   <tr>
     <td height="30">&nbsp;</td>
@@ -123,7 +123,7 @@
     <td width="23" valign="top" class="style6"><span class="style6">1.</span></td>
     <td colspan="2" valign="top" class="style6"><span class="style6">Pejabat yang memberi Perintah</span></td>
     <td width="10" valign="top" class="style6"><span class="style6">:</span></td>
-    <td width="451" valign="top" class="style6"><span class="style6">Sekretaris Daerah Kab. Purworejo</span></td>
+    <td valign="top" class="style6"><span class="style6">Sekretaris Daerah Kab. Purworejo</span></td>
     <td width="13" valign="top">&nbsp;</td>
   </tr>
   <tr>
@@ -245,7 +245,6 @@
     <td valign="top" class="style6"><span class="style6">Mata Anggaran</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
     <td valign="top" class="style6"><span class="style6">{{ $data->anggaran }}</span></td>
-    <td>&nbsp;</td>
   </tr>
   <tr>
     <td valign="top" class="style6"><span class="style6"></span></td>

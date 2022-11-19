@@ -15,7 +15,7 @@ class CreateRekening extends Migration
     {
         Schema::create('rekening', function (Blueprint $table) {
             $table->bigincrements('id');
-            $table->text('kode_angaran');
+            $table->text('angaran');
             $table->timestamps();
         });
     }

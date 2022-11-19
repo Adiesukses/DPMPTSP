@@ -13,36 +13,37 @@
 </head>
 
 <body>
-<table width="831" height="1324" border="3" bordercolor="#000000">
+<table width="831" height="1260" border="3" bordercolor="#000000">
   <tr>
-    <td height="313" colspan="2"><table width="820" border="0">
+    <td height="268" colspan="2"><table width="820" border="0">
       <tr>
         <td>&nbsp;</td>
-        <td><span class="style6">SPPD No</span></td>
-        <td><span class="style6">:</span></td>
-        <td><span class="style6">084  /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ 2022</span></td>
+        <td valign="top"><span class="style6">SPPD No</span></td>
+        <td valign="top"><span class="style6">:</span></td>
+        <td valign="top"><span class="style6">084  /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ 2022</span></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><span class="style6">Berangkat dari</span></td>
-        <td><span class="style6">:</span></td>
-        <td><span class="style6">DPMPTSP Kab. Purworejo</span></td>
+        <td valign="top"><span class="style6">Berangkat dari</span></td>
+        <td valign="top"><span class="style6">:</span></td>
+        <td valign="top"><span class="style6">DPMPTSP Kab. Purworejo</span></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><span class="style6">Pada tanggal</span></td>
-        <td><span class="style6">:</span></td>
-        <td>{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
+        <td valign="top"><span class="style6">Pada tanggal</span></td>
+        <td valign="top"><span class="style6">:</span></td>
+        <td valign="top">{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
       </tr>
       <tr>
-        <td width="405">&nbsp;</td>
-        <td width="137"><span class="style6">Ke</span></td>
-        <td width="15"><span class="style6">:</span></td>
-        <td width="245">{{ $data->tujuan }}</td>
+        <td width="307" height="22">&nbsp;</td>
+        <td width="110" valign="top"><span class="style6">Ke</span></td>
+        <td width="9" valign="top"><span class="style6">:</span></td>
+        <td width="376" valign="top">{{ $data->tujuan }}</td>
       </tr>
+      
       <tr>
         <td>&nbsp;</td>
-        <td colspan="3">&nbsp;</td>
+        <td colspan="3" valign="top" class="style6">&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -64,19 +65,16 @@
         <td>&nbsp;</td>
         <td height="18" colspan="3"><div align="center"><span class="style6">NIP.19761126 200803 1 002</span></div></td>
       </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td height="18" colspan="3">&nbsp;</td>
-        </tr>
+      
     </table></td>
   </tr>
   <tr>
-    <td width="405" height="181" valign="top"><table width="405" border="0">
+    <td width="406" height="213" valign="top"><table width="405" border="0">
       <tr>
         <td width="23" valign="top"><span class="style6">II.</span></td>
         <td width="129" valign="top"><span class="style6">Tiba di</span></td>
         <td width="10" valign="top" class="style6">:</td>
-        <td width="225" valign="top">{{ $data->tujuan }}</td>
+        <td width="225" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -96,32 +94,71 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="bottom"><div align="center"><img src="../../../public/img/LINE2.png" width="150" height="2" align="bottom" /></div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
     </table></td>
-    <td width="410" valign="top"><table width="405" border="0">
+    <td width="406" valign="top"><table width="405" border="0">
       <tr>
-        <td width="120" valign="top"><span class="style6">Berangkat dari</span></td>
-        <td width="10" valign="top" class="style6">:</td>
-        <td width="263" valign="top">{{ $data->tujuan }}</td>
+        <td width="94" valign="top"><span class="style6">Berangkat dari</span></td>
+        <td width="4" valign="top" class="style6">:</td>
+        <td width="293" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
       </tr>
       <tr>
-        <td><span class="style6">Pada Tanggal</span></td>
-        <td class="style6">:</td>
-        <td>{{ date('d F Y',strtotime($data->tanggal_kembali)) }}</td>
+        <td valign="top"><span class="style6">Pada Tanggal</span></td>
+        <td valign="top" class="style6">:</td>
+        <td valign="top">{{ date('d F Y',strtotime($data->tanggal_kembali)) }}</td>
       </tr>
       <tr>
-        <td><span class="style6">Ke</span></td>
-        <td class="style6">:</td>
-        <td><span class="style6">DPMPTSP Kab. Purworejo</span></td>
+        <td valign="top"><span class="style6">Ke</span></td>
+        <td valign="top" class="style6">:</td>
+        <td valign="top"><span class="style6">DPMPTSP Kab. Purworejo</span></td>
       </tr>
       <tr>
         <td><span class="style6">Kepala</span></td>
-        <td><span class="style6">:</span></td>
+        <td valign="top"><span class="style6">:</span></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="21">&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+        <td valign="bottom"><div align="center"><img src="../../../public/img/LINE2.png" width="150" height="2" align="bottom" /></div></td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
     </table></td>
   </tr>
   <tr>
-    <td height="180" valign="top"><table width="405" border="0">
+    <td height="177" valign="top"><table width="405" border="0">
       <tr>
         <td width="23"><span class="style6">III.</span></td>
         <td width="129"><span class="style6">Tiba di</span></td>
@@ -149,9 +186,9 @@
     </table></td>
     <td valign="top"><table width="405" border="0">
       <tr>
-        <td width="120"><span class="style6">Tiba di</span></td>
+        <td width="110"><span class="style6">Tiba di</span></td>
         <td width="10" class="style6">:</td>
-        <td width="263">&nbsp;</td>
+        <td width="271">&nbsp;</td>
       </tr>
       <tr>
         <td><span class="style6">Pada Tanggal</span></td>
@@ -221,7 +258,7 @@
     </table></td>
   </tr>
   <tr>
-    <td height="322" valign="top"><table width="405" height="110" border="0">
+    <td height="303" valign="top"><table width="405" height="91" border="0">
       <tr>
         <td width="23"><span class="style6">V.</span></td>
         <td width="123"><span class="style6">Tiba di</span></td>
@@ -229,7 +266,7 @@
         <td width="231"><span class="style6">DPMPTSP Kab. Purworejo</span></td>
       </tr>
       <tr>
-        <td height="76" valign="top"><span class="style6"></span></td>
+        <td height="57" valign="top"><span class="style6"></span></td>
         <td valign="top"><span class="style6">Pada Tanggal</span></td>
         <td valign="top" class="style6">:</td>
         <td valign="top">&nbsp;</td>
@@ -256,9 +293,9 @@
         </tr>
       </table>
     </td>
-    <td valign="top"><table width="406" height="110" border="0">
+    <td valign="top"><table width="406" height="91" border="0">
       <tr>
-        <td valign="top"><div align="justify"><span class="style6">Telah  diperiksa ,   dengan   keterangan   bahwa perjalanan tersebut diatas benar  dilakukan  atas perintahnya dan semata-mata  untuk kepentingan jabatan dalam waktu sesingkat-singkatnya.</span></div></td>
+        <td height="87" valign="top"><div align="justify"><span class="style6">Telah  diperiksa ,   dengan   keterangan   bahwa perjalanan tersebut diatas benar  dilakukan  atas perintahnya dan semata-mata  untuk kepentingan jabatan dalam waktu sesingkat-singkatnya.</span></div></td>
       </tr>
 
     </table>    

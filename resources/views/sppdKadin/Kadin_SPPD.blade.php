@@ -143,7 +143,7 @@
                             <select name="pptk" class="form-control select2 select2-hidden-accessible"
                                 data-select2-id="1" tabindex="-1" aria-hidden="true">
                                 <option value="" required>-Pilih PPTK-</option>
-                                @foreach ($data as $nana)
+                                @foreach ($nominatif as $nana)
                                 <option value="{{ $nana->nama }}">{{ $nana->nama }}</option>
                                 @endforeach
                                 
@@ -154,7 +154,7 @@
                             <select name="anggaran" class="form-control select2 " required>
                                 <option value="">- Pilih -</option>
                                 @foreach ($dina as $nana)
-                                <option value="{{ $nana->kode_angaran }}">{{ $nana->kode_angaran }}</option>
+                                <option value="{{ $nana->angaran }}">{{ $nana->angaran }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -194,10 +194,10 @@
                 <form action="{{ ('/tambahrek') }}" method="POST">
                     @csrf
                     <div class="form-row">
+                        
                         <div class="form-group col-md-12">
-                            <textarea name="kode_angaran" class="form-control"></textarea>
+                            <textarea name="angaran" class="form-control"></textarea>
                         </div>
- 
                         <div class="col">
                             <label></label>
                             <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
