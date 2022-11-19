@@ -100,7 +100,14 @@
                   <div class="form-row">
                         <div class="form-group col-md-6"> 
                           <label>PENGIKUT</label>
-                          <input name="nama" type="text" class="form-control" required>
+                          <select name="pptk"class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                            <option selected="selected" data-select2-id="3">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="35">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="36">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="37">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="38">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="39">GUNTUR SETIAWAN S.Pd</option>
+                          </select>
                         </div>
                         <div class="form-group col-md-6">
                           <label>TANGGAL SPPD</label>
@@ -186,37 +193,30 @@
             <div class="modal-body">
                 <form action="{{ ('/tambahrek') }}" method="POST">
                   @csrf
-                  <div class="row">
-                    <div class="col-lg-12">
-                    <textarea name="kode_angaran"class="form-control"></textarea>
-                    
-
-                                     
-                      <label>PPTK</label>
-                      <select name="pegawa" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
-                        <option value="">- Pilih -</option> 
-                        @foreach ($dina as $nana)
-                          <option value="{{ $nana->pegawai }}">{{ $nana->kode_angaran }}</option>
-                       @endforeach
-                      </select>
-                       
-                        <label></label>
-                        <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
-                
+                      <div class="form-row">
+                          <div class="form-group col-md-12">
+                              <label>MATA ANGGARAN</label>
+                              <textarea name="kode_angaran"class="form-control"></textarea>
+                          </div>
+                          <div class="form-group col-md-12">
+                              <label>PPTK</label>
+                              <select name="pegawa" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                  <option value="">- Pilih -</option> 
+                                          @foreach ($dina as $nana)
+                                            <option value="{{ $nana->pegawai }}">{{ $nana->kode_angaran }}</option>
+                                          @endforeach
+                              </select>
+                          </div>   
+                          <div class="col">
+                              <label></label>
+                              <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
+                          </div>
                     </div>
-                    </div>
-                  
-                  
                 </form>
-
-
-
-            </div> 
-
+            </div>
       </div>
     </div>
   </div>
-</div>
 
 
 @endsection
