@@ -97,91 +97,73 @@
             <div class="modal-body">
                 <form action="{{ ('/tambahsppd') }}" method="POST">
                   @csrf
-                  <div class="row">
-                    <div class="col">
-                      <label>PENGIKUT</label>
-                      <input name="nama" type="text" class="form-control" value=" MADA BAYU AJI" required>
-                    </div>
-                    
-                    <div class="col">
-                      <label>TANGGAL SPPD</label>
-                       <input name="tanggal_sppd" type="date" class="form-control" required>
-                    </div>
-                  </div>
-              <br>
-                  <div class="row">
-                    <div class="col">
-                      <label>BERANGKAT</label>
-                      <input name="tanggal_berangkat"type="date" class="form-control" required>
-                    </div>
-                    <div class="col">
-                      <label>KEMBALI</label>
-                      <input name="tanggal_kembali" type="date" class="form-control" required>
-                    </div> 
-                  </div>
-                  <br>
-                  <div class="row">
-                    <div class="col">
-                      <label>TUJUAN</label>
-                      <textarea name="tujuan" class="form-control" required></textarea>
-                    </div>
-                    <div class="col">
-                      <label>MAKSUD</label>
-                      <textarea name="maksud"class="form-control" required></textarea>
-                    </div>
-                  </div>
-                  <BR>
-                  <div class="row">
-                    <div class="col">
-                      <label>KENDARAAN</label>
-                      <select name="kendaraan" class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                        <option selected="selected" data-select2-id="3">Kendaraan Dinas (Roda Empat)</option>
-                        <option data-select2-id="35">Kendaraan Dinas (Roda Empat)</option>
-                        <option data-select2-id="36">Kendaraan Dinas (Roda Dua)</option>
-                        <option data-select2-id="37">Kendaraan Umum (Pesawat)</option>
-                        <option data-select2-id="38">Kendaraan Umum (Kereta Api)</option>
-                        <option data-select2-id="39">Kendaraan Umum (Bus)</option>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <label>PPTK</label>
-                      <select name="pptk"class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                        <option selected="selected" data-select2-id="3">GUNTUR SETIAWAN S.Pd</option>
-                        <option data-select2-id="35">GUNTUR SETIAWAN S.Pd</option>
-                        <option data-select2-id="36">GUNTUR SETIAWAN S.Pd</option>
-                        <option data-select2-id="37">GUNTUR SETIAWAN S.Pd</option>
-                        <option data-select2-id="38">GUNTUR SETIAWAN S.Pd</option>
-                        <option data-select2-id="39">GUNTUR SETIAWAN S.Pd</option>
-                      </select>
-                    </div>
-                  </div>
-                  <BR>
-                    <div class="row">
-                      <div class="col">
-                        <label>DASAR PERJALANAN</label>
-                        <textarea name="dasar" class="form-control"></textarea>
-                      </div>
-                      <div class="col">
-                        <label>KODE MATA ANGGARAN</label>
-                        <select name="anggaran" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
-                          <option value="">- Pilih -</option> 
-                          @foreach ($dina as $nana)
-                            <option value="{{ $nana->kode_angaran }}">{{ $nana->kode_angaran }}</option>
-                         @endforeach
-                        </select>
-
-                      </div>
-                    </div>
-                    <BR>
-                      <div class="row">
-                        <div class="col">
-                          <label></label>
+                  <div class="form-row">
+                        <div class="form-group col-md-6"> 
+                          <label>PENGIKUT</label>
+                          <input name="nama" type="text" class="form-control" required>
                         </div>
-                        <div class="col">
+                        <div class="form-group col-md-6">
+                          <label>TANGGAL SPPD</label>
+                          <input name="tanggal_sppd" type="date" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>BERANGKAT</label>
+                          <input name="tanggal_berangkat"type="date" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>KEMBALI</label>
+                          <input name="tanggal_kembali" type="date" class="form-control" required>
+                        </div> 
+                        <div class="form-group col-md-6">
+                            <label>KENDARAAN</label>
+                            <select name="kendaraan" class="form-control select2 select2-hidden-accessible" required>
+                              <option value="" data-select2-id="3">-Pilih Kendaraan-</option>
+                              <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
+                              <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
+                              <option value="Kendaraan Umum (Pesawat)">Kendaraan Umum (Pesawat)</option>
+                              <option value="Kendaraan Umum (Kereta Api)">Kendaraan Umum (Kereta Api)</option>
+                              <option value="Kendaraan Umum (Bus)">Kendaraan Umum (Bus)</option>
+                            </select>
+                          </div>
+                    
+                        <div class="form-group col-md-6">
+                          <label>PPTK</label>
+                          <select name="pptk"class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                            <option selected="selected" data-select2-id="3">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="35">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="36">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="37">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="38">GUNTUR SETIAWAN S.Pd</option>
+                            <option data-select2-id="39">GUNTUR SETIAWAN S.Pd</option>
+                          </select>
+                        </div> 
+                        <div class="form-group col-md-12">
+                          <label>KODE MATA ANGGARAN</label>
+                          <select name="anggaran" class="form-control select2 " required>
+                            <option value="">- Pilih -</option> 
+                            @foreach ($dina as $nana)
+                              <option value="{{ $nana->kode_angaran }}">{{ $nana->kode_angaran }}</option>
+                           @endforeach
+                          </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label>DASAR PERJALANAN</label>
+                          <textarea name="dasar" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label>TUJUAN</label>
+                          <textarea name="tujuan" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label>MAKSUD</label>
+                          <textarea name="maksud"class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
                           <label></label>
                           <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
                         </div>
-                  
+                  </div>
+               
                 </form>
 
 
