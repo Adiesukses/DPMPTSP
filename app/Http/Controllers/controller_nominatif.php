@@ -82,7 +82,7 @@ class controller_nominatif extends Controller
     public function listData(Request $req)
     {
         $data = model_nominatif::all();
-        return view('nominatif/nominatif_list')->with([
+        return view('nominatif_list')->with([
             'data' => $data
         ]);
     }
