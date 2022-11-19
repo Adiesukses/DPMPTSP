@@ -19,7 +19,7 @@
             </div>
                   <br>
                   <a href ="{{ url('kadinsppd2') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah SPPD</a>
-                  <button type="button" class="btn btn-SUCCESS mt-3" data-toggle="modal" data-target="#modal-rek">+ Tambah Rekening</button>
+                  <button type="button" class="btn btn-SUCCESS ml-2 mt-3" data-toggle="modal" data-target="#modal-rek">+ Tambah Rekening</button>
 
           </div>
 
@@ -195,18 +195,9 @@
                   @csrf
                       <div class="form-row">
                           <div class="form-group col-md-12">
-                              <label>MATA ANGGARAN</label>
                               <textarea name="kode_angaran"class="form-control"></textarea>
                           </div>
-                          <div class="form-group col-md-12">
-                              <label>PPTK</label>
-                              <select name="pegawa" class="form-control select2 " data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                  <option value="">- Pilih -</option> 
-                                          @foreach ($dina as $nana)
-                                            <option value="{{ $nana->pegawai }}">{{ $nana->kode_angaran }}</option>
-                                          @endforeach
-                              </select>
-                          </div>   
+ 
                           <div class="col">
                               <label></label>
                               <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
@@ -222,30 +213,31 @@
 @endsection
 
 <script>
-window.onload = function () {
-    getList();
-    $("#ikitambah").submit(function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: $("#ikitambah").attr("action"),
-            method: "POST",
-            data: $("#ikitambah").serialize(),
-        }).done(function (response) {
-            getList();
-            $('#modal-tambah').modal('hide');
-        }).fail(function (jqXHR, textStatus) {});
-    });
+  window.onload=function()
+// window.onload = function () {
+//     getList();
+//     $("#ikitambah").submit(function (e) {
+//         e.preventDefault();
+//         $.ajax({
+//             url: $("#ikitambah").attr("action"),
+//             method: "POST",
+//             data: $("#ikitambah").serialize(),
+//         }).done(function (response) {
+//             getList();
+//             $('#modal-tambah').modal('hide');
+//         }).fail(function (jqXHR, textStatus) {});
+//     });
 
-    $('#modal-tambah').on('hidden.bs.modal', function (e) {
-        $(this)
-            .find("input,textarea,select")
-            .val('')
-            .end()
-            .find("input[type=checkbox], input[type=radio]")
-            .prop("checked", "")
-            .end();
-    });
-}
+//     $('#modal-tambah').on('hidden.bs.modal', function (e) {
+//         $(this)
+//             .find("input,textarea,select")
+//             .val('')
+//             .end()
+//             .find("input[type=checkbox], input[type=radio]")
+//             .prop("checked", "")
+//             .end();
+//     });
+// }
 </script>
 
 
