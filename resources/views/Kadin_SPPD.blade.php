@@ -100,8 +100,8 @@
                   <div class="form-row">
                         <div class="form-group col-md-6"> 
                           <label>PENGIKUT</label>
-                          <select name="pptk"class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                            <option selected="selected" data-select2-id="3">GUNTUR SETIAWAN S.Pd</option>
+                          <select name="nama"class="form-control select2 select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                            <option value="GUNTUR SETIAWAN S.Pd" data-select2-id="3">GUNTUR SETIAWAN S.Pd</option>
                             <option data-select2-id="35">GUNTUR SETIAWAN S.Pd</option>
                             <option data-select2-id="36">GUNTUR SETIAWAN S.Pd</option>
                             <option data-select2-id="37">GUNTUR SETIAWAN S.Pd</option>
@@ -169,14 +169,9 @@
                           <label></label>
                           <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
                         </div>
-                  </div>
-               
+                  </div>          
                 </form>
-
-
-
             </div> 
-
       </div>
     </div>
   </div>
