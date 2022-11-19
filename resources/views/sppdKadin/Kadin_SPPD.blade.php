@@ -18,7 +18,7 @@
 
                     </div>
                     <br>
-                    <a href="{{ url('kadinsppd2') }}" type="button" class="btn btn-primary mt-3" data-toggle="modal"
+                    <a href="" type="button" class="btn btn-primary mt-3" data-toggle="modal"
                         data-target="#modal-tambah">+ Tambah SPPD</a>
                     <button type="button" class="btn btn-SUCCESS ml-2 mt-3" data-toggle="modal"
                         data-target="#modal-rek">+ Tambah Rekening</button>
@@ -180,7 +180,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div class="modal fade" id="modal-rek" style="display: none;" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
