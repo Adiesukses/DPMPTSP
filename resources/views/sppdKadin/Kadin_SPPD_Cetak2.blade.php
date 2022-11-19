@@ -35,15 +35,15 @@
         <td valign="top">{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
       </tr>
       <tr>
-        <td width="307" height="22">&nbsp;</td>
-        <td width="110" valign="top"><span class="style6">Ke</span></td>
-        <td width="9" valign="top"><span class="style6">:</span></td>
-        <td width="376" valign="top">{{ $data->tujuan }}</td>
+        <td width="349" height="22">&nbsp;</td>
+        <td width="107" valign="top"><span class="style6">Ke</span></td>
+        <td width="6" valign="top"><span class="style6">:</span></td>
+        <td width="340" valign="top">{{ $data->tujuan }}</td>
       </tr>
       
       <tr>
         <td>&nbsp;</td>
-        <td colspan="3" valign="top" class="style6">&nbsp;</td>
+        <td colspan="3" valign="top">&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -55,15 +55,15 @@
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td height="18" colspan="3"><div align="center"><span class="style8">GUNTUR SETIAWAN, S.Pd.</span></div></td>
+        <td height="18" colspan="3" valign="bottom"><div align="center"><span class="style8">GUNTUR SETIAWAN, S.Pd.</span></div></td>
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td height="18" colspan="3"><div align="center"><span class="style6">Penata TK I / III d</span></div></td>
+        <td height="18" colspan="3" valign="top"><div align="center"><span class="style6">Penata TK I / III d</span></div></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td height="18" colspan="3"><div align="center"><span class="style6">NIP.19761126 200803 1 002</span></div></td>
+        <td height="22" colspan="3" valign="top"><div align="center"><span class="style6">NIP.19761126 200803 1 002</span></div></td>
       </tr>
       
     </table></td>
@@ -138,7 +138,7 @@
       <tr>
         <td height="21">&nbsp;</td>
         <td valign="top">&nbsp;</td>
-        <td valign="bottom"><div align="center"><img src={{ url('img/LINE2.png') }}" width="150" height="2" align="bottom" /></div></td>
+        <td valign="bottom"><div align="center"><img src="{{ url('img/LINE2.png') }}" width="150" height="2" align="bottom" /></div></td>
         </tr>
       <tr>
         <td height="21">&nbsp;</td>
