@@ -14,7 +14,12 @@ class CreateAgenda extends Migration
     public function up()
     {
         Schema::create('agenda', function (Blueprint $table) {
-            $table->id();
+            $table->bigincrements('id');
+            $table->text('kegiatan');
+            $table->text('opd');
+            $table->date('deadline');
+            $table->text('keterangan');
+            $table->integer('progres');
             $table->timestamps();
         });
     }
