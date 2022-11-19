@@ -143,8 +143,8 @@
                             <select name="pptk" class="form-control select2 select2-hidden-accessible"
                                 data-select2-id="1" tabindex="-1" aria-hidden="true">
                                 <option value="" required>-Pilih PPTK-</option>
-                                @foreach ($dina as $nana)
-                                <option value="{{ $nana->pptk }}">{{ $nana->pptk }}</option>
+                                @foreach ($data as $nana)
+                                <option value="{{ $nana->nama }}">{{ $nana->nama }}</option>
                                 @endforeach
                                 
                             </select>
