@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<table width="831" height="1260" border="3" bordercolor="#000000">
+<table width="831" height="1225" border="3" bordercolor="#000000">
   <tr>
     <td height="268" colspan="2"><table width="820" border="0">
       <tr>
@@ -69,30 +69,24 @@
     </table></td>
   </tr>
   <tr>
-    <td width="406" height="213" valign="top"><table width="405" border="0">
+    <td width="406" height="191" valign="top"><table width="405" border="0">
       <tr>
-        <td width="23" valign="top"><span class="style6">II.</span></td>
-        <td width="129" valign="top"><span class="style6">Tiba di</span></td>
+        <td width="19" valign="top"><span class="style6">II.</span></td>
+        <td width="110" valign="top"><span class="style6">Tiba di</span></td>
         <td width="10" valign="top" class="style6">:</td>
-        <td width="225" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
+        <td width="248" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
       </tr>
       <tr>
-        <td><span class="style6"></span></td>
-        <td><span class="style6">Pada Tanggal</span></td>
-        <td class="style6">:</td>
-        <td>{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
+        <td valign="top"><span class="style6"></span></td>
+        <td valign="top"><span class="style6">Pada Tanggal</span></td>
+        <td valign="top" class="style6">:</td>
+        <td valign="top">{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</td>
       </tr>
       <tr>
-        <td><span class="style6"></span></td>
-        <td><span class="style6">Kepala</span></td>
-        <td class="style6">:</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td valign="top"><span class="style6"></span></td>
+        <td valign="top"><span class="style6">Kepala</span></td>
+        <td valign="top" class="style6">:</td>
+        <td valign="top">&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -104,26 +98,22 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td valign="bottom"><div align="center"><img src="../../../public/img/LINE2.png" width="150" height="2" align="bottom" /></div></td>
+        <td valign="bottom"><div align="center"><img src="{{ url('img/LINE2.png') }}" width="150" height="2" align="bottom" /></div></td>
       </tr>
       <tr>
+        <td height="21">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td valign="bottom">&nbsp;</td>
       </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
+      
+      
     </table></td>
     <td width="406" valign="top"><table width="405" border="0">
       <tr>
-        <td width="94" valign="top"><span class="style6">Berangkat dari</span></td>
-        <td width="4" valign="top" class="style6">:</td>
-        <td width="293" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
+        <td width="110" valign="top"><span class="style6">Berangkat dari</span></td>
+        <td width="10" valign="top" class="style6">:</td>
+        <td width="271" valign="top"><div align="justify">{{ $data->tujuan }}</div></td>
       </tr>
       <tr>
         <td valign="top"><span class="style6">Pada Tanggal</span></td>
@@ -148,22 +138,22 @@
       <tr>
         <td height="21">&nbsp;</td>
         <td valign="top">&nbsp;</td>
-        <td valign="bottom"><div align="center"><img src="../../../public/img/LINE2.png" width="150" height="2" align="bottom" /></div></td>
+        <td valign="bottom"><div align="center"><img src={{ url('img/LINE2.png') }}" width="150" height="2" align="bottom" /></div></td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td height="21">&nbsp;</td>
         <td valign="top">&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
     </table></td>
   </tr>
   <tr>
-    <td height="177" valign="top"><table width="405" border="0">
+    <td height="175" valign="top"><table width="405" border="0">
       <tr>
         <td width="23"><span class="style6">III.</span></td>
-        <td width="129"><span class="style6">Tiba di</span></td>
-        <td width="10" class="style6">:</td>
-        <td width="225">&nbsp;</td>
+        <td width="105"><span class="style6">Tiba di</span></td>
+        <td width="12" class="style6">:</td>
+        <td width="247">&nbsp;</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -208,12 +198,12 @@
     </table></td>
   </tr>
   <tr>
-    <td height="172" valign="top"><table width="405" border="0">
+    <td height="182" valign="top"><table width="405" border="0">
       <tr>
         <td width="23"><span class="style6">IV.</span></td>
-        <td width="129"><span class="style6">Tiba di</span></td>
-        <td width="10" class="style6">:</td>
-        <td width="225">&nbsp;</td>
+        <td width="107"><span class="style6">Tiba di</span></td>
+        <td width="12" class="style6">:</td>
+        <td width="245">&nbsp;</td>
       </tr>
       <tr>
         <td><span class="style6"></span></td>
@@ -258,7 +248,7 @@
     </table></td>
   </tr>
   <tr>
-    <td height="303" valign="top"><table width="405" height="91" border="0">
+    <td height="287" valign="top"><table width="405" height="91" border="0">
       <tr>
         <td width="23"><span class="style6">V.</span></td>
         <td width="123"><span class="style6">Tiba di</span></td>
@@ -272,7 +262,7 @@
         <td valign="top">&nbsp;</td>
       </tr>
     </table>
-      <table width="406" height="208" border="0">
+      <table width="406" height="191" border="0">
         <tr>
           <td height="43" valign="bottom" class="style6"><div align="center"></div></td>
         </tr>
@@ -283,13 +273,13 @@
           <td height="40" class="style6"><div align="center"><span class="style9"></span></div></td>
         </tr>
         <tr>
-          <td valign="bottom" class="style6"><div align="center"><strong>GUNTUR SETIAWAN, S.Pd</strong></div></td>
+          <td height="22" valign="bottom" class="style6"><div align="center"><strong>GUNTUR SETIAWAN, S.Pd</strong></div></td>
         </tr>
         <tr>
-          <td valign="top" class="style6"><div align="center">Penata TK I / III d</div></td>
+          <td height="22" valign="top" class="style6"><div align="center">Penata TK I / III d</div></td>
         </tr>
         <tr>
-          <td valign="top" class="style6"><div align="center"><span class="style9"></span>NIP.19761126 200803 1 002</div></td>
+          <td height="22" valign="top" class="style6"><div align="center"><span class="style9"></span>NIP.19761126 200803 1 002</div></td>
         </tr>
       </table>
     </td>
@@ -299,7 +289,7 @@
       </tr>
 
     </table>    
-      <table width="406" height="208" border="0">
+      <table width="406" height="192" border="0">
         <tr>
           <td height="43" valign="bottom" class="style6"><div align="center"><span class="style9">an. BUPATI PURWOREJO</span></div></td>
         </tr>
@@ -310,19 +300,19 @@
           <td height="40" class="style6"><div align="center"><span class="style9"></span></div></td>
         </tr>
         <tr>
-          <td valign="bottom" class="style6"><div align="center"><strong>Drs. SAID ROMADHON</strong></div></td>
+          <td height="22" valign="bottom" class="style6"><div align="center"><strong>Drs. SAID ROMADHON</strong></div></td>
         </tr>
         <tr>
-          <td valign="top" class="style6"><div align="center">Pembina Utama Madya</div></td>
+          <td height="22" valign="top" class="style6"><div align="center">Pembina Utama Madya</div></td>
         </tr>
         <tr>
-          <td valign="top" class="style6"><div align="center"><span class="style9"></span>NIP. 19640122 198903 1 004</div></td>
+          <td height="23" valign="top" class="style6"><div align="center"><span class="style9"></span>NIP. 19640122 198903 1 004</div></td>
         </tr>
       </table>
     </td>
   </tr>
   <tr>
-    <td height="35" colspan="2" valign="top"><table width="822" border="0">
+    <td height="30" colspan="2" valign="top"><table width="822" border="0">
       <tr>
         <td width="28" class="style6"><span class="style9">VI.</span></td>
         <td width="784" height="22" class="style6"><span class="style9">CATATAN LAIN - LAIN</span></td>
