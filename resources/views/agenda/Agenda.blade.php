@@ -88,10 +88,10 @@
     </div>
 </section>
 <div class="modal fade" id="modal-tambah" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">TAMBAH SPPD</h4>
+                <h4 class="modal-title">TAMBAH AGENDA</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -99,78 +99,41 @@
             <div class="modal-body">
                 <form action="" method="POST">
                     @csrf
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>PENGIKUT</label>
-                            <select name="nama" class="form-control select2 select2-hidden-accessible"
-                                data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                <option value="MADA BAYU AJI" data-select2-id="3">MADA BAYU AJI</option>
-
-                                <option value=""></option>
-
-                            </select>
+                 
+                        <div class="form-group col-md-12">
+                            <label>KEGIATAN</label>
+                            <textarea name="kegiatan" class="form-control" required></textarea>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label>TANGGAL SPPD</label>
+
+                        <div class="form-group col-md-12">
+                            <label>PERANGKAT DAERAH</label>
                             <input name="tanggal_sppd" type="date" class="form-control" required>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label>BERANGKAT</label>
-                            <input name="tanggal_berangkat" type="date" class="form-control" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>KEMBALI</label>
-                            <input name="tanggal_kembali" type="date" class="form-control" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>KENDARAAN</label>
-                            <select name="kendaraan" class="form-control select2 select2-hidden-accessible" required>
-                                <option value="" data-select2-id="3">-Pilih Kendaraan-</option>
-                                <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
-                                <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
-                                <option value="Kendaraan Umum (Pesawat)">Kendaraan Umum (Pesawat)</option>
-                                <option value="Kendaraan Umum (Kereta Api)">Kendaraan Umum (Kereta Api)</option>
-                                <option value="Kendaraan Umum (Bus)">Kendaraan Umum (Bus)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label>PPTK</label>
-                            <select name="pptk" class="form-control select2 select2-hidden-accessible"
-                                data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                <option value="" required>-Pilih PPTK-</option>
-
-                                <option value="">kkk</option>
-
-
-                            </select>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label>KODE MATA ANGGARAN</label>
-                            <select name="anggaran" class="form-control select2 " required>
-                                <option value="">- Pilih -</option>
-                                {{-- @foreach ($dina as $nana)
-                              <option value="{{ $nana->angaran }}">{{ $nana->angaran }}</option>
-                                @endforeach --}}
-                            </select>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label>DASAR PERJALANAN</label>
-                            <textarea name="dasar" class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label>TUJUAN</label>
-                            <textarea name="tujuan" class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label>MAKSUD</label>
-                            <textarea name="maksud" class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label></label>
-                            <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
-                        </div>
+                
+                    <div class="form-group col-md-12">
+                        <label>DEADLINE</label>
+                        <input name="tanggal_berangkat" type="date" class="form-control" required>
                     </div>
+                    <div class="form-group col-md-12">
+                        <label>KETERANGAN</label>
+                        <textarea name="kegiatan" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>PROGRESS</label>
+                        <select name="kendaraan" class="form-control select2 select2-hidden-accessible" required>
+                            <option value="" data-select2-id="3">-Pilih Kendaraan-</option>
+                            <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
+                            <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
+                            <option value="Kendaraan Umum (Pesawat)">Kendaraan Umum (Pesawat)</option>
+                            <option value="Kendaraan Umum (Kereta Api)">Kendaraan Umum (Kereta Api)</option>
+                            <option value="Kendaraan Umum (Bus)">Kendaraan Umum (Bus)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label></label>
+                        <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
+                    </div>
+
                 </form>
             </div>
         </div>
