@@ -107,7 +107,7 @@
 
                         <div class="form-group col-md-12">
                             <label>PERANGKAT DAERAH</label>
-                            <input name="tanggal_sppd" type="date" class="form-control" required>
+                            <input name="tanggal_sppd" type="text" class="form-control" required>
                         </div>
                 
                     <div class="form-group col-md-12">
@@ -115,20 +115,14 @@
                         <input name="tanggal_berangkat" type="date" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
+                        <label>PROGRESS</label>
+                        <input name="tanggal_sppd" type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-12">
                         <label>KETERANGAN</label>
                         <textarea name="kegiatan" class="form-control" required></textarea>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label>PROGRESS</label>
-                        <select name="kendaraan" class="form-control select2 select2-hidden-accessible" required>
-                            <option value="" data-select2-id="3">-Pilih Kendaraan-</option>
-                            <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
-                            <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
-                            <option value="Kendaraan Umum (Pesawat)">Kendaraan Umum (Pesawat)</option>
-                            <option value="Kendaraan Umum (Kereta Api)">Kendaraan Umum (Kereta Api)</option>
-                            <option value="Kendaraan Umum (Bus)">Kendaraan Umum (Bus)</option>
-                        </select>
-                    </div>
+
                     <div class="form-group col-md-12">
                         <label></label>
                         <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
