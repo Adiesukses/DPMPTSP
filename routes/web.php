@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controller_nominatif;
 use App\Http\Controllers\controller_sppdkadin;
 use App\Http\Controllers\controller_rekening;
+use App\Http\Controllers\controller_agenda;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +44,7 @@ Route::post('/update/{id}', [controller_nominatif::class,'update']);
 //Route Delete Data
 Route::get('/delete{id}', [controller_nominatif::class,'delete']);
 //-----------------------------------------------------------------------
-Route::get('/agendaj', [controller_nominatif::class,'cc']);
+Route::get('/agendaj', [controller_nominatif::class,'index']);
 
 Route::get('/agenda', function () {
     return view('agenda/agenda');

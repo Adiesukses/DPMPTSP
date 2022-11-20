@@ -13,14 +13,14 @@ class controller_agenda extends Controller
      */
     public function index()
     {
-        $data = model_sppdkadin::all();
-        $dina=model_rekening::all();
-        $nominatif=model_nominatif::all();
-        return view('sppdKadin/Kadin_SPPD')->with([
-            'data' => $data,
-            'dina'=>$dina,
-            'nominatif'=>$nominatif
-        ]);
+        // $data = model_sppdkadin::all();
+        // $dina=model_rekening::all();
+        // $nominatif=model_nominatif::all();
+        return view('agenda/agenda')//->with([
+            // 'data' => $data,
+            // 'dina'=>$dina,
+            // 'nominatif'=>$nominatif
+        // ]);
     }
 
     /**
