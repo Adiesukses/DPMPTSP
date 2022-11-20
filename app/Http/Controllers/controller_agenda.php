@@ -16,7 +16,7 @@ class controller_agenda extends Controller
         // $data = model_sppdkadin::all();
         // $dina=model_rekening::all();
         // $nominatif=model_nominatif::all();
-        return view('agenda/agenda')//->with([
+        return view('agenda/agenda');//->with([
             // 'data' => $data,
             // 'dina'=>$dina,
             // 'nominatif'=>$nominatif
