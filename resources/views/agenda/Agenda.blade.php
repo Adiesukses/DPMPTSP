@@ -116,7 +116,7 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label>PROGRESS</label>
-                        <input name="tanggal_sppd" type="text" class="form-control" required>
+                        <input name="tanggal_sppd" type="number" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
                         <label>KETERANGAN</label>

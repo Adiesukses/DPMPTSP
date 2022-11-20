@@ -46,6 +46,6 @@ Route::get('/delete{id}', [controller_nominatif::class,'delete']);
 //-----------------------------------------------------------------------
 Route::get('/agenda', [controller_agenda::class,'index']);
 
-// Route::get('/agenda', function () {
-//     return view('agenda/agenda');
-// });
+Route::get('/dd', function () {
+     return view('cc');
+ });
