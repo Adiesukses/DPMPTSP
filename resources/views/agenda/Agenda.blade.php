@@ -21,7 +21,7 @@
 
                                 <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
                                     Agenda</a>
-                                <a href="#" class="dropdown-item">Ubah Agenda</a>
+                                <a href="#" class="dropdown-item tampilModalUbah"data-toggle="modal" data-target="#modal-tambah">Ubah Agenda</a>
                                 <a href="#" class="dropdown-item">Something else here</a>
                                 <a class="dropdown-divider"></a>
                                 <a href="#" class="dropdown-item">Separated link</a>
@@ -73,7 +73,7 @@
                                     </td>
 
                                     <td class="project-actions text-left">
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-info btn-sm tampilModalUbah" data-toggle="modal" data-target="#modal-tambah"href="#">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                         </a>
@@ -141,4 +141,15 @@
         </div>
     </div>
 </div>
+<script>
+function getList() {
+    $.ajax({
+        url: "/nominatif_list",
+        method: "GET",
+    }).done(function (response) {
+        $('#listnya').html(response);
+    }).fail(function (jqXHR, textStatus) {});
+}
+
+</script>
 @endsection
