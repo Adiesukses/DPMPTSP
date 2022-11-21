@@ -19,7 +19,7 @@
             </div>
                   <br>
                   <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modal-tambah">+ Tambah Pegawai</button>
-
+                  <button type="button" class="btn btn-warning mt-3" data-toggle="modal" data-target="#modal-tambah"><i class="fas fa-upload"></i> Upload Data</button>
           </div>
 
           <!-- /.card-header -->
