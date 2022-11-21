@@ -1,3 +1,6 @@
+@php
+ $i=1;                           
+@endphp
 @extends('layout.home')
 @section('halaman')
 <section class="content">
@@ -16,24 +19,24 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
 
-                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Ubah
-                                    Data</a>
-                                <a href="#" class="dropdown-item">Catatan</a>
+                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
+                                    Agenda</a>
+                                <a href="#" class="dropdown-item">Ubah Agenda</a>
                                 <a href="#" class="dropdown-item">Something else here</a>
                                 <a class="dropdown-divider"></a>
                                 <a href="#" class="dropdown-item">Separated link</a>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                         </button>
-
+                            
                         <button type="button" class="btn btn-tool" data-card-widget="remove">
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body p-0">
+                <div class="card-body p-0"> 
                     <div class="table-responsive">
                         <table class="table m-0">
                             <thead>
@@ -48,20 +51,24 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+                            @foreach ($data as $agenda )
+                                
+                         
                                 <tr>
-                                    <td>1</td>
-                                    <td>Call of Duty IV</td>
-                                    <td>Call of Duty IV</td>
-                                    <td>Call of Duty IV</td>
-                                    <td>Call of Duty IV</td>
+                                    <td>{{ $i++ }}</td>
+                                    <td>{{ $agenda->kegiatan }}</td>
+                                    <td>{{ $agenda->opd }} </td>
+                                    <td>{{ $agenda->deadline }}</td>
+                                    <td>{{ $agenda->keterangan }}</td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="47"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 47%">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow=""
+                                                aria-valuemin="0" aria-valuemax="100" style="width: {{ $agenda->progres }}%">
                                             </div>
                                         </div>
                                         <small>
-                                            47% Complete
+                                            {{ $agenda->progres }} % Complete
                                         </small>
                                     </td>
 
@@ -76,6 +83,7 @@
                                         </a>
                                     </td>
                                 </tr>
+                                   @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -97,7 +105,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="{{ ('/routeAgenda') }}" method="POST">
                     @csrf
                  
                         <div class="form-group col-md-12">
@@ -107,20 +115,20 @@
 
                         <div class="form-group col-md-12">
                             <label>PERANGKAT DAERAH</label>
-                            <input name="tanggal_sppd" type="text" class="form-control" required>
+                            <input name="opd" type="text" class="form-control" required>
                         </div>
                 
                     <div class="form-group col-md-12">
                         <label>DEADLINE</label>
-                        <input name="tanggal_berangkat" type="date" class="form-control" required>
+                        <input name="deadline" type="date" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
                         <label>PROGRESS</label>
-                        <input name="tanggal_sppd" type="number" class="form-control" required>
+                        <input name="progres" type="number" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
                         <label>KETERANGAN</label>
-                        <textarea name="kegiatan" class="form-control" required></textarea>
+                        <textarea name="keterangan" class="form-control" required></textarea>
                     </div>
 
                     <div class="form-group col-md-12">

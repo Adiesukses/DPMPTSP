@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\model_agenda;
 class controller_agenda extends Controller
 {
     /**
@@ -13,14 +13,10 @@ class controller_agenda extends Controller
      */
     public function index()
     {
-        // $data = model_sppdkadin::all();
-        // $dina=model_rekening::all();
-        // $nominatif=model_nominatif::all();
-        return view('agenda/agenda');//->with([
-            // 'data' => $data,
-            // 'dina'=>$dina,
-            // 'nominatif'=>$nominatif
-        // ]);
+        $data = model_agenda::all();
+        return view('agenda/agenda')-> with([
+            'data' => $data
+        ]);
     }
 
     /**
@@ -41,7 +37,9 @@ class controller_agenda extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->except(['_token']);
+        model_agenda::insert($data);
+        return redirect('/agenda')->with('message','Operation Successful !');
     }
 
     /**

@@ -45,7 +45,7 @@ Route::post('/update/{id}', [controller_nominatif::class,'update']);
 Route::get('/delete{id}', [controller_nominatif::class,'delete']);
 //-----------------------------------------------------------------------
 Route::get('/agenda', [controller_agenda::class,'index']);
-
+Route::post('/routeAgenda', [controller_agenda::class,'store']);
 Route::get('/dd', function () {
      return view('cc');
  });
