@@ -138,7 +138,7 @@ function edit(ikiid) {
         $("#ikiubah").submit(function (e) {
           e.preventDefault();
           $.ajax({
-              url: $("#ikiubah").attr("action"),
+              url: $("#ikiubah").attr("action"), 
               method: "POST",
               data: $("#ikiubah").serialize(),
           }).done(function (response) {
