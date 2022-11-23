@@ -99,11 +99,12 @@ window.onload = function () {
             method: "POST",
             data: $("#ikitambah").serialize(),
         }).done(function (response) {
-            getList();
+           getList();
             $('#modal-tambah').modal('hide');
         }).fail(function (jqXHR, textStatus) {});
+        
     });
-
+    
     $('#modal-tambah').on('hidden.bs.modal', function (e) {
         
         $(this)
