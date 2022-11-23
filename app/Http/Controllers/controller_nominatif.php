@@ -15,7 +15,7 @@ class controller_nominatif extends Controller
     public function Nominatif()
     {
         $data = model_nominatif::all();
-        return view('Nominatif')->with([
+        return view('nominatif/Nominatif')->with([
             'data' => $data
         ]);
     }
@@ -25,10 +25,7 @@ class controller_nominatif extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function Nom_Tambah()
-    {
-        return view('Nom_Tambah');
-    }
+
     public function tambahpeg(Request $request)
     {
         $data=$request->except(['_token']);
@@ -77,12 +74,12 @@ class controller_nominatif extends Controller
         $data['judul'] = "SSS";
 
         //print_r($data->nama);
-        return view('nominatif_modal',$data);
+        return view('nominatif/nominatif_modal',$data);
     }
     public function listData(Request $req)
     {
         $data = model_nominatif::all();
-        return view('nominatif_list')->with([
+        return view('nominatif/nominatif_list')->with([
             'data' => $data
         ]);
     }
