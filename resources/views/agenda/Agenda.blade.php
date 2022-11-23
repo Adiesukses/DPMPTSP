@@ -1,6 +1,4 @@
-@php
- $i=1;                           
-@endphp
+
 @extends('layout.home')
 @section('halaman')
 <section class="content">
@@ -37,57 +35,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0"> 
-                    <div class="table-responsive">
-                        <table class="table m-0">
-                            <thead>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>KEGIATAN</th>
-                                    <th>PERANKAT DAERAH</th>
-                                    <th>DEADLINE</th>
-                                    <th>KETERANGAN</th>
-                                    <th>PROGRESS</th>
-                                    <th>AKSI</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach ($data as $agenda )
-                                
-                         
-                                <tr>
-                                    <td>{{ $i++ }}</td>
-                                    <td>{{ $agenda->kegiatan }}</td>
-                                    <td>{{ $agenda->opd }} </td>
-                                    <td>{{ $agenda->deadline }}</td>
-                                    <td>{{ $agenda->keterangan }}</td>
-                                    <td class="project_progress">
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow=""
-                                                aria-valuemin="0" aria-valuemax="100" style="width: {{ $agenda->progres }}%">
-                                            </div>
-                                        </div>
-                                        <small>
-                                            {{ $agenda->progres }} % Complete
-                                        </small>
-                                    </td>
-
-                                    <td class="project-actions text-left">
-                                        <a class="btn btn-info btn-sm tampilModalUbah" data-toggle="modal" data-target="#modal-tambah"href="#">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                   @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- /.table-responsive -->
+                    <div id="listnya"></div>
                 </div>
                 <!-- /.card-body -->
 
@@ -105,7 +53,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ ('/routeAgenda') }}" method="POST">
+                <form id="ikitambah" action="{{ ('/routeAgenda') }}" method="POST">
                     @csrf
                  
                         <div class="form-group col-md-12">
@@ -142,14 +90,39 @@
     </div>
 </div>
 <script>
+window.onload = function () {
+    getList();
+    $("#ikitambah").submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: $("#ikitambah").attr("action"),
+            method: "POST",
+            data: $("#ikitambah").serialize(),
+        }).done(function (response) {
+            getList();
+            $('#modal-tambah').modal('hide');
+        }).fail(function (jqXHR, textStatus) {});
+    });
+
+    $('#modal-tambah').on('hidden.bs.modal', function (e) {
+        
+        $(this)
+            .find("input,textarea,select")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end();    
+    });
+
+}
 function getList() {
     $.ajax({
-        url: "/nominatif_list",
+        url: "/routeAgendaTabel",
         method: "GET",
     }).done(function (response) {
         $('#listnya').html(response);
     }).fail(function (jqXHR, textStatus) {});
 }
-
 </script>
 @endsection

@@ -18,7 +18,13 @@ class controller_agenda extends Controller
             'data' => $data
         ]);
     }
-
+    public function listData(Request $req)
+    {
+        $data = model_agenda::all();
+        return view('agenda/agendaTabel')->with([
+            'data' => $data
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *

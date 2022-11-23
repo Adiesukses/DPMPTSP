@@ -22,12 +22,11 @@
                   <button type="button" class="btn btn-warning mt-3" data-toggle="modal" data-target="#modal-tambah"><i class="fas fa-upload"></i> Upload Data</button>
           </div>
 
-          <!-- /.card-header -->
-          <div class="card-body p-0" >
-          <div id="listnya"></div>
-          <!-- /.card-body -->
-
-        </div>
+          <!-- Tabel List -->
+          <div class="card-body p-0">
+              <div id="listnya"></div>
+          </div>
+          <!-- ---------- -->
       </div>
     </div>
 
