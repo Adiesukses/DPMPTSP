@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\controller_nominatif;
+use App\Http\Controllers\controller_dashboard;
 use App\Http\Controllers\controller_sppdkadin;
 use App\Http\Controllers\controller_rekening;
+use App\Http\Controllers\controller_nominatif;
 use App\Http\Controllers\controller_agenda;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +29,8 @@ Route::get('/cb', function () {
 });
 
 
-Route::get('/',[controller_nominatif::class,'dashboard']);
-Route::get('/Dashboard', [controller_nominatif::class,'dashboard']);
+Route::get('/',[controller_dashboard::class,'index']);
+Route::get('/Dashboard', [controller_dashboard::class,'index']);
 Route::get('/Nominatif', [controller_nominatif::class,'Nominatif']);
 Route::post('/get_data', [controller_nominatif::class,'getData']);
 Route::get('/nominatif_list', [controller_nominatif::class,'listData']);

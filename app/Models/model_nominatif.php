@@ -14,7 +14,6 @@ class model_nominatif extends Model
     'gol',
     'alamat',
     'no_hp'
-
     ];
 
 }

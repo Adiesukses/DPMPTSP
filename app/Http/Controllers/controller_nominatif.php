@@ -52,20 +52,7 @@ class controller_nominatif extends Controller
         $item=model_nominatif::findorfail($id);
         $item->delete();
     }
-   public function dashboard()
-    {
-        $data=model_nominatif::all()->count();
-       return view('dashboard')->with([
-        'data' => $data
-    ]);
-    }
-    public function cc()
-    {
-        $data=model_nominatif::all()->count();
-       return view('cc')->with([
-        'data' => $data
-    ]);
-    }
+
 
     public function getData(Request $req)
     {
