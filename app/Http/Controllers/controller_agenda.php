@@ -79,9 +79,19 @@ class controller_agenda extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item=model_agenda::findorfail($id);
+        $data=$request->except(['_token']);
+        $item->update($data);
     }
+    public function getData(Request $req)
+    {
+        $responSql = model_agenda::findorfail($req->dataId);
+        $data['ikilodatane'] = $responSql;
+        $data['judul'] = "SSS";
 
+        //print_r($data->nama);
+        return view('agenda/agendaFormEdit',$data);
+    }
     /**
      * Remove the specified resource from storage.
      *

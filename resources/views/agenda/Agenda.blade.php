@@ -19,7 +19,6 @@
 
                                 <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
                                     Agenda</a>
-                                <a href="#" class="dropdown-item tampilModalUbah"data-toggle="modal" data-target="#modal-tambah">Ubah Agenda</a>
                                 <a href="#" class="dropdown-item">Something else here</a>
                                 <a class="dropdown-divider"></a>
                                 <a href="#" class="dropdown-item">Separated link</a>
@@ -89,6 +88,24 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modal-edit" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">UBAH AGENDA</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+             <!------FORM EDIT--------->
+            <div class="modal-body">
+                <div id="oke"></div>
+            </div>
+            <!------------------------->
+        </div>
+    </div>
+</div>
 <script>
 window.onload = function () {
     getList();
@@ -115,7 +132,32 @@ window.onload = function () {
             .prop("checked", "")
             .end();    
     });
-    
+}
+function edit(ikiid) {
+    $.ajax({
+        url: "routeAgendaData",
+        method: "POST",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {
+            dataId: ikiid
+        },
+    }).done(function (response) {
+        $('#oke').html(response);
+        $('#modal-edit').modal('show');
+        $("#ikiubah").submit(function (e) {
+          e.preventDefault();
+          $.ajax({
+              url: $("#ikiubah").attr("action"), 
+              method: "POST",
+              data: $("#ikiubah").serialize(),
+          }).done(function (response) {
+              getList();
+              $('#modal-edit').modal('hide');
+          }).fail(function (jqXHR, textStatus) {});
+        });
+    }).fail(function (jqXHR, textStatus) {});
 }
 function getList() {
     $.ajax({

@@ -36,7 +36,7 @@
                 </td>
 
                 <td class="project-actions text-left">
-                    <a class="btn btn-info btn-sm tampilModalUbah" data-toggle="modal" data-target="#modal-tambah"href="#">
+                    <a class="btn btn-info btn-sm" onclick="edit({{ $agenda->id }})">
                         <i class="fas fa-pencil-alt">
                         </i>
                     </a>

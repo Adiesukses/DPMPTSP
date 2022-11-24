@@ -48,6 +48,8 @@ Route::get('/delete{id}', [controller_nominatif::class,'delete']);
 Route::get('/agenda', [controller_agenda::class,'index']);
 Route::post('/routeAgenda', [controller_agenda::class,'store']);
 Route::get('/routeAgendaTabel', [controller_agenda::class,'listData']);
+Route::post('/routeAgendaData', [controller_agenda::class,'getData']);
+Route::post('/update/{id}', [controller_agenda::class,'update']);
 Route::get('/dd', function () {
      return view('cc');
  });
