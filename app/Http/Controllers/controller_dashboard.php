@@ -14,8 +14,9 @@ class controller_dashboard extends Controller
     public function index()
     {
         $data=model_nominatif::all()->count();
-       return view('dashboard',)->with([
+       return view('dashboard')->with([
         'data' => $data
+
     ]);
     }
 
