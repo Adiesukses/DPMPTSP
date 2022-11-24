@@ -17,6 +17,8 @@ use App\Http\Controllers\controller_agenda;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',[controller_dashboard::class,'index']);
+Route::get('/Dashboard', [controller_dashboard::class,'index']);
 
 Route::get('/kadinsppd', [controller_sppdkadin::class,'index']);
 Route::get('/kadinsppdctk/{id}', [controller_sppdkadin::class,'cetak']);
@@ -29,14 +31,11 @@ Route::get('/cb', function () {
 });
 
 
-Route::get('/',[controller_dashboard::class,'index']);
-Route::get('/Dashboard', [controller_dashboard::class,'index']);
+
 Route::get('/Nominatif', [controller_nominatif::class,'Nominatif']);
 Route::post('/get_data', [controller_nominatif::class,'getData']);
 Route::get('/nominatif_list', [controller_nominatif::class,'listData']);
-//----------------------------------------------------------------------
-//Route Tambah data
-Route::get('/Form_Tambah', [controller_nominatif::class,'Nom_Tambah']);
+
 Route::post('/tambahpeg', [controller_nominatif::class,'tambahpeg']);
 //----------------------------------------------------------------------
 //Route Edit Data

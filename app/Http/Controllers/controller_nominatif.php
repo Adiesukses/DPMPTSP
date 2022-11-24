@@ -30,7 +30,7 @@ class controller_nominatif extends Controller
     {
         $data=$request->except(['_token']);
         model_nominatif::insert($data);
-        return redirect('Nominatif')->with('message','Operation Successful !');
+        //return redirect('Nominatif')->with('message','Operation Successful !');
     }
     public function Nom_Edit($id)
     {
@@ -45,7 +45,7 @@ class controller_nominatif extends Controller
         $item=model_nominatif::findorfail($id);
         $data=$request->except(['_token']);
         $item->update($data);
-        return redirect('Nominatif');
+        // return redirect('Nominatif');
     }
     public function delete(Request $request, $id)
     {

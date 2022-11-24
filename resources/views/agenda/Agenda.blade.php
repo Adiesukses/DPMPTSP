@@ -115,7 +115,7 @@ window.onload = function () {
             .prop("checked", "")
             .end();    
     });
-
+    
 }
 function getList() {
     $.ajax({
