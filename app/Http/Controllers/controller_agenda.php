@@ -45,7 +45,7 @@ class controller_agenda extends Controller
     {
         $data=$request->except(['_token']);
         model_agenda::insert($data);
-        return redirect('/agenda')->with('message','Operation Successful !');
+        // return redirect('/agenda')->with('message','Operation Successful !');
     }
 
     /**
@@ -98,8 +98,9 @@ class controller_agenda extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $item=model_agenda::findorfail($id);
+        $item->delete();
     }
 }

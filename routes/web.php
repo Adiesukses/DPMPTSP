@@ -29,27 +29,24 @@ Route::post('/tambahrek', [controller_rekening::class,'store']);
 Route::get('/cb', function () {
     return view('cc');
 });
-
-
-
-Route::get('/Nominatif', [controller_nominatif::class,'Nominatif']);
-Route::post('/get_data', [controller_nominatif::class,'getData']);
-Route::get('/nominatif_list', [controller_nominatif::class,'listData']);
-
-Route::post('/tambahpeg', [controller_nominatif::class,'tambahpeg']);
+Route::get('/nominatif', [controller_nominatif::class,'index']);
+Route::get('/nominatifList', [controller_nominatif::class,'listData']);
+Route::post('/nominatifTambah', [controller_nominatif::class,'store']);
+Route::post('/nominatifData', [controller_nominatif::class,'getData']);
+Route::post('/nomUpdate/{id}', [controller_nominatif::class,'update']);
+Route::get('/nomDelete{id}', [controller_nominatif::class,'destroy']);
 //----------------------------------------------------------------------
-//Route Edit Data
-Route::get('/Nom_Edit/{id}', [controller_nominatif::class,'Nom_Edit']);
-Route::post('/update/{id}', [controller_nominatif::class,'update']);
+
 //-----------------------------------------------------------------------
 //Route Delete Data
-Route::get('/delete{id}', [controller_nominatif::class,'delete']);
+
 //-----------------------------------------------------------------------
 Route::get('/agenda', [controller_agenda::class,'index']);
-Route::post('/routeAgenda', [controller_agenda::class,'store']);
-Route::get('/routeAgendaTabel', [controller_agenda::class,'listData']);
-Route::post('/routeAgendaData', [controller_agenda::class,'getData']);
-Route::post('/update/{id}', [controller_agenda::class,'update']);
+Route::get('/agendaList', [controller_agenda::class,'listData']);
+Route::post('/agendaTambah', [controller_agenda::class,'store']);
+Route::post('/agendaData', [controller_agenda::class,'getData']);
+Route::post('/agenUpdate/{id}', [controller_agenda::class,'update']);
+Route::get('/agenDelete{id}', [controller_nominatif::class,'destroy']);
 Route::get('/dd', function () {
      return view('cc');
  });

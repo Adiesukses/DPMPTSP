@@ -12,10 +12,10 @@ class controller_nominatif extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function Nominatif()
+    public function index()
     {
         $data = model_nominatif::all();
-        return view('nominatif/Nominatif')->with([
+        return view('nominatif/nominatif')->with([
             'data' => $data
         ]);
     }
@@ -26,28 +26,20 @@ class controller_nominatif extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function tambahpeg(Request $request)
+    public function store(Request $request)
     {
         $data=$request->except(['_token']);
         model_nominatif::insert($data);
         //return redirect('Nominatif')->with('message','Operation Successful !');
     }
-    public function Nom_Edit($id)
-    {
-        $data=model_nominatif::findorfail($id);
-        return view('Nom_Edit')->with([
-            'data' => $data
-            
-            ]);
-    }
+
         public function update(Request $request, $id)
     {
         $item=model_nominatif::findorfail($id);
         $data=$request->except(['_token']);
         $item->update($data);
-        // return redirect('Nominatif');
     }
-    public function delete(Request $request, $id)
+    public function destroy(Request $request, $id)
     {
         $item=model_nominatif::findorfail($id);
         $item->delete();
@@ -59,8 +51,6 @@ class controller_nominatif extends Controller
         $responSql = model_nominatif::findorfail($req->dataId);
         $data['ikilodatane'] = $responSql;
         $data['judul'] = "SSS";
-
-        //print_r($data->nama);
         return view('nominatif/nominatif_modal',$data);
     }
     public function listData(Request $req)

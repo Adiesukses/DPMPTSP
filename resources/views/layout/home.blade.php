@@ -113,7 +113,7 @@
           </li>
           <li class="nav-header">KEPEGAWAIAN</li>
           <li class="nav-item">
-            <a href="{{ url('Nominatif') }}" class="nav-link">
+            <a href="{{ url('nominatif') }}" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 NOMINATIF PEGAWAI

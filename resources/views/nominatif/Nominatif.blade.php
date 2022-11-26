@@ -44,7 +44,7 @@
               <div class="modal-body">
                 <div class="row">
                   <div class="col-lg-12">
-                      <form id="ikitambah" action="{{ ('/tambahpeg') }}" method="POST" >
+                      <form id="ikitambah" action="{{ ('/nominatifTambah') }}" method="POST" >
                           @csrf
                           <div class="form-group ml-4 mt-3">
                               <label>NAMA</label>
@@ -124,7 +124,7 @@ window.onload = function () {
 
 function edit(ikiid) {
     $.ajax({
-        url: "get_data",
+        url: "nominatifData",
         method: "POST",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -151,7 +151,7 @@ function edit(ikiid) {
 
 function getList() {
     $.ajax({
-        url: "/nominatif_list",
+        url: "/nominatifList",
         method: "GET",
     }).done(function (response) {
         $('#listnya').html(response);
@@ -160,7 +160,7 @@ function getList() {
 
 function hapus(ikiid) {
     $.ajax({
-        url: "delete"+ikiid,
+        url: "/nomDelete"+ikiid,
         method: "GET",
     }).done(function (response) {
       getList();

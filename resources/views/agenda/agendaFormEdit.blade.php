@@ -1,4 +1,4 @@
-<form id="ikiubah" action="{{ url('update/'.$ikilodatane->id) }}" method="POST">
+<form id="ikiubah" action="{{ url('agenUpdate/'.$ikilodatane->id) }}" method="POST">
     @csrf
  
         <div class="form-group col-md-12">

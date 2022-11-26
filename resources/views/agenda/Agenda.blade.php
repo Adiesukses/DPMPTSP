@@ -52,7 +52,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="ikitambah" action="{{ ('/routeAgenda') }}" method="POST">
+                <form id="ikitambah" action="{{ ('/agendaTambah') }}" method="POST">
                     @csrf
                  
                         <div class="form-group col-md-12">
@@ -135,7 +135,7 @@ window.onload = function () {
 }
 function edit(ikiid) {
     $.ajax({
-        url: "routeAgendaData",
+        url: "agendaData",
         method: "POST",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -161,10 +161,18 @@ function edit(ikiid) {
 }
 function getList() {
     $.ajax({
-        url: "/routeAgendaTabel",
+        url: "/agendaList",
         method: "GET",
     }).done(function (response) {
         $('#listnya').html(response);
+    }).fail(function (jqXHR, textStatus) {});
+}
+function hapus(ikiid) {
+    $.ajax({
+        url: "/agenDelete"+ikiid,
+        method: "GET",
+    }).done(function (response) {
+      getList();
     }).fail(function (jqXHR, textStatus) {});
 }
 </script>

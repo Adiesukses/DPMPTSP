@@ -40,7 +40,7 @@
                         <i class="fas fa-pencil-alt">
                         </i>
                     </a>
-                    <a class="btn btn-danger btn-sm" href="#">
+                    <a class="btn btn-danger btn-sm" onclick ="return confirm ('Yakin Bro?')" href="javascript:hapus({{ $agenda->id }})">
                         <i class="fas fa-trash">
                         </i>
                     </a>
