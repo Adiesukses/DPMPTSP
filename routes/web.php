@@ -46,7 +46,7 @@ Route::get('/agendaList', [controller_agenda::class,'listData']);
 Route::post('/agendaTambah', [controller_agenda::class,'store']);
 Route::post('/agendaData', [controller_agenda::class,'getData']);
 Route::post('/agenUpdate/{id}', [controller_agenda::class,'update']);
-Route::get('/agenDelete{id}', [controller_nominatif::class,'destroy']);
+Route::get('/agenDelete{id}', [controller_agenda::class,'destroy']);
 Route::get('/dd', function () {
      return view('cc');
  });
