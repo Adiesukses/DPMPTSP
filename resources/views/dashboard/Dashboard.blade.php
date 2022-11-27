@@ -245,28 +245,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php
+                                    $i=1;  
+                                    @endphp
                                     <tr>
-                                        <td>1</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
+                                        @foreach ($data1 as $keg)
+                                        <td>{{ $i++ }}</td>
+                                        <td>{{ $keg->kegiatan }}</td>
+                                        <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
+                                        <td>{{ $keg->tempat }}</td>
+                                        <td>{{ $keg->keterangan }}</td>
+                                        <td>{{ $keg->disposisi }}</td>
                                         <td class="project-actions text-left">
                                             <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-flag">
@@ -274,89 +263,7 @@
                                                 Selesai
                                             </a></td>
                                     </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Call of Duty IV</td>
-                                        <td>Kasubbag Umum & Staff</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

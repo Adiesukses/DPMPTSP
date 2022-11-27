@@ -20,6 +20,7 @@ use App\Http\Controllers\controller_agenda;
 */
 Route::get('/',[controller_dashboard::class,'index']);
 Route::get('/Dashboard', [controller_dashboard::class,'index']);
+Route::get('/dashList', [controller_dashboard::class,'listData']);
 //---------------------------SPPD-------------------------------------------
 Route::get('/kadinsppd', [controller_sppdkadin::class,'index']);
 Route::get('/kadinsppdctk/{id}', [controller_sppdkadin::class,'cetak']);

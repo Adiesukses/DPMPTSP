@@ -22,7 +22,7 @@
                 <td>{{ $i++ }}</td>
                 <td>{{ $agenda->kegiatan }}</td>
                 <td>{{ $agenda->opd }} </td>
-                <td>{{ $agenda->deadline }}</td>
+                <td>{{ date('d F Y',strtotime($agenda->deadline)) }}</td>
                 <td>{{ $agenda->keterangan }}</td>
                 <td class="project_progress">
                     <div class="progress progress-sm">
