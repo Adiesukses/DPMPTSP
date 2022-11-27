@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
+use App\Models\model_dashboard;
 class controller_dashboard extends Controller
 {
     /**
