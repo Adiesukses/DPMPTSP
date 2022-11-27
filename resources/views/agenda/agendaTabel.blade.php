@@ -4,7 +4,7 @@
             <tr>
                 <th>NO</th>
                 <th>KEGIATAN</th>
-                <th>PERANKAT DAERAH</th>
+                <th>KOORDINATOR</th>
                 <th>DEADLINE</th>
                 <th>KETERANGAN</th>
                 <th>PROGRESS</th>

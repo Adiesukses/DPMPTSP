@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="form-group col-md-12">
-                            <label>PERANGKAT DAERAH</label>
+                            <label>KOORDINATOR</label>
                             <input name="opd" type="text" class="form-control" required>
                         </div>
                 
