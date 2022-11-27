@@ -213,7 +213,8 @@
                                 <i class="fas fa-wrench"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a href="#" class="dropdown-item">Ubah Data</a>
+                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
+                                    Kegiatan</a>
                                 <a href="#" class="dropdown-item">Catatan</a>
                                 <a href="#" class="dropdown-item">Something else here</a>
                                 <a class="dropdown-divider"></a>
@@ -276,4 +277,50 @@
         </div>
     </div>
 </section>
+<div class="modal fade" id="modal-tambah" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">TAMBAH KEGIATAN</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="ikitambah" action="" method="POST">
+                    @csrf
+                 
+                        <div class="form-group col-md-12">
+                            <label>KEGIATAN</label>
+                            <textarea name="kegiatan" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label>TANGGAL</label>
+                            <input name="tanggal" type="date" class="form-control" required>
+                        </div>
+                
+                    <div class="form-group col-md-12">
+                        <label>TEMPAT</label>
+                        <input name="tempat" type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>DISPOSISI</label>
+                        <input name="disposisi" type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>KETERANGAN</label>
+                        <textarea name="keterangan" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label></label>
+                        <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
