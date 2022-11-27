@@ -51,7 +51,7 @@ class controller_nominatif extends Controller
         $responSql = model_nominatif::findorfail($req->dataId);
         $data['ikilodatane'] = $responSql;
         $data['judul'] = "SSS";
-        return view('nominatif/nominatif_modal',$data);
+        return view('nominatif/nominatifFormEdit',$data);
     }
     public function listData(Request $req)
     {
