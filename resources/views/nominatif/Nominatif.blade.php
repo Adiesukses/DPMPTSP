@@ -25,7 +25,7 @@
           <!-- Tabel List -->
           <div class="card-body p-0">
               <div id="listnya"></div>
-            
+            {{ $data->links() }}
           </div>
           <!-- ---------- -->
       </div>

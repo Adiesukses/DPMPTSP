@@ -14,7 +14,7 @@ class controller_nominatif extends Controller
 
     public function index()
     {
-        $data = model_nominatif::all();
+        $data = model_nominatif::paginate(11);
         return view('nominatif/nominatif')->with([
             'data' => $data
         ]);
@@ -55,7 +55,7 @@ class controller_nominatif extends Controller
     }
     public function listData(Request $req)
     {
-        $data = model_nominatif::all();
+        $data = model_nominatif::paginate(11);
         return view('nominatif/nominatif_list')->with([
             'data' => $data
         ]);
