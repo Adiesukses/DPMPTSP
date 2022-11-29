@@ -25,13 +25,13 @@
           <!-- Tabel List -->
           <div class="card-body p-0">
               <div id="listnya"></div>
-            {{ $data->links() }}
           </div>
           <!-- ---------- -->
       </div>
     </div>
 
 </section>
+
 <!-- Modal Tambah---->
 <div class="modal fade" id="modal-tambah"  style="display: none;"aria-hidden="true">
   <div class="modal-dialog modal-lg">
