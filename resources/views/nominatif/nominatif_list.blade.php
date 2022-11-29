@@ -18,9 +18,9 @@
 
             @endphp
 
-            @foreach ($data as $peg)
+            @foreach ($data as $index => $peg)
             <tr>
-                <td>{{ $i++ }} </td>
+                <td>{{ $index + $data -> firstitem() }} </td>
                 <td>{{ $peg->nama }}</td>
                 <td>{{ $peg->nip }}</td>
                 <td>{{ $peg->jabatan }}</td>
