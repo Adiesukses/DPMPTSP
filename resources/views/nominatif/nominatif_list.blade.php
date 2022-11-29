@@ -1,5 +1,3 @@
-
-<section>
 <div class="table-responsive">
     <table class="table m-0">
         <thead>
@@ -58,5 +56,5 @@
             </tr>
         </tbody>
 </div>
-</section>
+
  {{-- @endsection  --}}
