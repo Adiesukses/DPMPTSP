@@ -1,7 +1,7 @@
 {{-- @extends('layout.home')
 @section('halaman') --}}
 <div class="table-responsive">
-    <table class="table m-0">
+    <table class="table m-0" id="dataxxx">
         <thead>
             <tr>
                 <th>NO</th>
@@ -20,9 +20,9 @@
 
             @endphp
 
-            @foreach ($data as $index => $peg)
+            @foreach ($data as $peg)
             <tr>
-                <td>{{ $index + $data -> firstitem() }} </td>
+                <td>{{ $i++ }} </td>
                 <td>{{ $peg->nama }}</td>
                 <td>{{ $peg->nip }}</td>
                 <td>{{ $peg->jabatan }}</td>
@@ -46,17 +46,12 @@
                 </td>
             </tr>
             @endforeach
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>{{ $data->links() }}</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
         </tbody>
 </div>
+<script>
+$(document).ready(function () {
+    $('#dataxxx').DataTable();
+});
+</script>
 {{-- 
 @endsection --}}

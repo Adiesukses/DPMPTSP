@@ -26,6 +26,7 @@ class controller_nominatif extends Controller
 
     public function store(Request $request)
     {
+
         $data=$request->except(['_token']);
         model_nominatif::insert($data);
         //return redirect('Nominatif')->with('message','Operation Successful !');
@@ -53,7 +54,7 @@ class controller_nominatif extends Controller
     }
     public function listData(Request $req)
     {
-        $data = model_nominatif::paginate(11);
+        $data = model_nominatif::all();
         return view('nominatif.nominatif_list')->with([
             'data' => $data
         ]);

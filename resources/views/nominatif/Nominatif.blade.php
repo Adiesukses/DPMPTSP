@@ -46,7 +46,7 @@
                 <div class="row">
                   <div class="col-lg-12">
                       <form id="ikitambah" action="{{ ('/nominatifTambah') }}" method="POST" >
-                          @csrf
+                          
                           <div class="form-group ml-4 mt-3">
                               <label>NAMA</label>
                               <input type="text" name="nama"  class="form-control"required>
@@ -103,6 +103,9 @@ window.onload = function () {
     $("#ikitambah").submit(function (e) {
         e.preventDefault();
         $.ajax({
+            headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+             },
             url: $("#ikitambah").attr("action"),
             method: "POST",
             data: $("#ikitambah").serialize(),
