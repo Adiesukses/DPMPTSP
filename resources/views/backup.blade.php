@@ -136,15 +136,10 @@
 
 
 
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2022 <a href="#">SEKRETARIAT DPMPTSP</a></strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Adie_Ok</b>
 
-         <div class="row">
-                <!-- Left col -->
-                <div class="col-md-12">
-
-               <div class="card">
-       <div class="card-tools">
-
- </div>
- </div>
- </div>
- </div>
+        </footer>
