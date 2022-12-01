@@ -45,7 +45,7 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>TOTAL ANGGARAN</h3>
+                            <h4>TOTAL ANGGARAN</h4>
                             <h4><strong>Rp 1000.0000.0000</strong></h4>
 
                         </div>
