@@ -22,6 +22,11 @@ class controller_dashboard extends Controller
 
     ]);
     }
+    public function index2()
+    {
+
+       return view('dashboard/dashboard_user'); 
+    }
 
     /**
      * Show the form for creating a new resource.
