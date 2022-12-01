@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
 use App\Models\model_dashboard;
+use App\Models\model_kegiatan;
+
 class controller_dashboard extends Controller
 {
     /**
@@ -24,9 +26,12 @@ class controller_dashboard extends Controller
     }
     public function index2()
     {
-
-       return view('dashboard/dashboard_user'); 
+        $data=model_kegiatan::all();
+        return view('dashboard/dashboard_user')->with([
+         'data' => $data
+        ]); 
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -93,4 +98,8 @@ class controller_dashboard extends Controller
     {
         //
     }
+
+
+
+
 }

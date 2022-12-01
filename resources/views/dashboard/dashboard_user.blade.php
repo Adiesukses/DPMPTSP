@@ -91,136 +91,7 @@
 
             </div>
             <!-- .CHART -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">SERAPAN ANGGARAN</h3>
 
-                            <div class="card-tools">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fas fa-wrench"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                        <a href="#" class="dropdown-item">Ubah Data</a>
-                                        <a href="#" class="dropdown-item">Catatan</a>
-                                        <a href="#" class="dropdown-item">Something else here</a>
-                                        <a class="dropdown-divider"></a>
-                                        <a href="#" class="dropdown-item">Separated link</a>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <p class="text-center">
-                                        <strong>September 2022</strong>
-                                    </p>
-                                    <div class="chart">
-                                        <!-- Sales Chart Canvas -->
-                                        <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
-                                    </div>
-                                    <!-- /.chart-responsive -->
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-md-4">
-                                    <p class="text-center">
-                                    </p>
-                                    <div class="progress-group">
-                                        Sekretariat
-                                        <span class="float-right"><b>160</b>/200</span>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-primary" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                    <!-- /.progress-group -->
-                                    <div class="progress-group">
-                                        Bidang PM
-                                        <span class="float-right"><b>310</b>/400</span>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-danger" style="width: 75%"></div>
-                                        </div>
-                                    </div>
-                                    <!-- /.progress-group -->
-                                    <div class="progress-group">
-                                        <span class="progress-text">Bidang Perizinan</span>
-                                        <span class="float-right"><b>480</b>/800</span>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-success" style="width: 60%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-group">
-                                        Bidang Data
-                                        <span class="float-right"><b>250</b>/500</span>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-warning" style="width: 50%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./card-body -->
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col-sm-3 col-6">
-                                    <div class="description-block border-right">
-                                        <span class="description-percentage text-success"><i
-                                                class="fas fa-caret-up"></i>
-                                            17%</span>
-                                        <h5 class="description-header">Rp 54.000.000</h5>
-                                        <span class="description-text">SEKRETARIAT</span>
-                                    </div>
-                                    <!-- /.description-block -->
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-sm-3 col-6">
-                                    <div class="description-block border-right">
-                                        <span class="description-percentage text-warning"><i
-                                                class="fas fa-caret-left"></i>
-                                            0%</span>
-                                        <h5 class="description-header">20.000.000</h5>
-                                        <span class="description-text">Bidang PM</span>
-                                    </div>
-                                    <!-- /.description-block -->
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-sm-3 col-6">
-                                    <div class="description-block border-right">
-                                        <span class="description-percentage text-success"><i
-                                                class="fas fa-caret-up"></i>
-                                            20%</span>
-                                        <h5 class="description-header">50.000.000</h5>
-                                        <span class="description-text">Bidang Perizinan</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 col-6">
-                                    <div class="description-block">
-                                        <span class="description-percentage text-danger"><i
-                                                class="fas fa-caret-down"></i>
-                                            18%</span>
-                                        <h5 class="description-header">30.000.000</h5>
-                                        <span class="description-text">Bidang Data</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.card-footer -->
-                    </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-            </div>
             <!-- /.row -->
 
             <!-- Main row -->
@@ -235,20 +106,7 @@
                         <div class="card-header border-transparent">
                             <h3 class="card-title">AGENDA KEGIATAN</h3>
                             <div class="card-tools">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fas fa-wrench"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                        <a href="#" class="dropdown-item" data-toggle="modal"
-                                            data-target="#modal-tambah">Tambah
-                                            Kegiatan</a>
-                                        <a href="#" class="dropdown-item">Catatan</a>
-                                        <a href="#" class="dropdown-item">Something else here</a>
-                                        <a class="dropdown-divider"></a>
-                                        <a href="#" class="dropdown-item">Separated link</a>
-                                    </div>
-                                </div>
+
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                     <i class="fas fa-minus"></i>
                                 </button>
@@ -278,13 +136,13 @@
                                         $i=1;
                                         @endphp
                                         <tr>
-                                            {{-- @foreach ($data1 as $keg) --}}
+                                            @foreach ($data as $keg)
                                             <td>{{ $i++ }}</td>
-                                            <td></td>
-                                            <td></td>{{-- {{ date('d F Y',strtotime($keg->tanggal)) }} --}}
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{ $keg->kegiatan }}</td>
+                                            <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
+                                            <td>{{ $keg->tempat }}</td>
+                                            <td>{{ $keg->keterangan }}</td>
+                                            <td>{{ $keg->disposisi }}</td>
                                             <td class="project-actions text-left">
                                                 <a class="btn btn-primary btn-sm" href="#">
                                                     <i class="fas fa-flag">
@@ -292,7 +150,7 @@
                                                     Selesai
                                                 </a></td>
                                         </tr>
-                                        {{-- @endforeach --}}
+                                     @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -316,8 +174,12 @@
 
         </footer>
 
+<script language="javascript">
+setTimeout(function(){
+   window.location.reload(1);
+}, 1000);
+</script>
 
-    <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
@@ -327,17 +189,14 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.js"></script>
 
-    <!-- PAGE PLUGINS -->
-    <!-- jQuery Mapael -->
     <script src="plugins/chart.js/Chart.min.js"></script>
 
-    <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard2.js"></script>
 
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-    {{-- @include('sweetalert::alert') --}}
+
 
 
 </body>
