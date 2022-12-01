@@ -233,43 +233,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th>NO</th>
-                                        <th>ACARA/KEGIATAN</th>
-                                        <th>TANGGAL</th>
-                                        <th>TEMPAT</th>
-                                        <th>KETERANGAN</th>
-                                        <th>DISPOSISI</th>
-                                        <th>AKSI</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php
-                                    $i=1;
-                                    @endphp
-                                    <tr>
-                                        @foreach ($data1 as $keg)
-                                        <td>{{ $i++ }}</td>
-                                        <td>{{ $keg->kegiatan }}</td>
-                                        <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
-                                        <td>{{ $keg->tempat }}</td>
-                                        <td>{{ $keg->keterangan }}</td>
-                                        <td>{{ $keg->disposisi }}</td>
-                                        <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-flag">
-                                                </i>
-                                                Selesai
-                                            </a></td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
+                        <div id="listnya"></div>
                     </div>
                     <!-- /.card-body -->
 
@@ -288,9 +252,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="ikitambah" action="" method="POST">
+                <form id="ikitambah" action="{{ ('/tambahKeg') }}" method="POST">
                     @csrf
-
                     <div class="form-group col-md-12">
                         <label>KEGIATAN</label>
                         <textarea name="kegiatan" class="form-control" required></textarea>
@@ -324,4 +287,42 @@
         </div>
     </div>
 </div>
+<script>
+     window.onload = function () {
+        getList();
+        $("#ikitambah").submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: $("#ikitambah").attr("action"),
+                method: "POST",
+                data: $("#ikitambah").serialize(),
+            }).done(function (response) {
+                getList();
+                $('#modal-tambah').modal('hide');
+            }).fail(function (jqXHR, textStatus) {});
+        });
+
+        $('#modal-tambah').on('hidden.bs.modal', function (e) {
+            $(this)
+                .find("input,textarea,select")
+                .val('')
+                .end()
+                .find("input[type=checkbox], input[type=radio]")
+                .prop("checked", "")
+                .end();
+        });
+    }
+
+function getList() {
+    $.ajax({
+        url: "/dashList",
+        method: "GET",
+    }).done(function (response) {
+        $('#listnya').html(response);
+    }).fail(function (jqXHR, textStatus) {});
+}
+</script>
 @endsection

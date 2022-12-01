@@ -22,6 +22,7 @@ Route::get('/',[controller_dashboard::class,'index']);
 Route::get('/user',[controller_dashboard::class,'index2']);
 Route::get('/Dashboard', [controller_dashboard::class,'index']);
 Route::get('/dashList', [controller_dashboard::class,'listData']);
+Route::post('/tambahKeg', [controller_dashboard::class,'store']);
 //---------------------------SPPD-------------------------------------------
 Route::get('/kadinsppd', [controller_sppdkadin::class,'index']);
 Route::get('/kadinsppdctk/{id}', [controller_sppdkadin::class,'cetak']);

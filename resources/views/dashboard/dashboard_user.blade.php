@@ -117,43 +117,8 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table m-0">
-                                    <thead>
-                                        <tr>
-                                            <th>NO</th>
-                                            <th>ACARA/KEGIATAN</th>
-                                            <th>TANGGAL</th>
-                                            <th>TEMPAT</th>
-                                            <th>KETERANGAN</th>
-                                            <th>DISPOSISI</th>
-                                            <th>AKSI</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @php
-                                        $i=1;
-                                        @endphp
-                                        <tr>
-                                            @foreach ($data as $keg)
-                                            <td>{{ $i++ }}</td>
-                                            <td>{{ $keg->kegiatan }}</td>
-                                            <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
-                                            <td>{{ $keg->tempat }}</td>
-                                            <td>{{ $keg->keterangan }}</td>
-                                            <td>{{ $keg->disposisi }}</td>
-                                            <td class="project-actions text-left">
-                                                <a class="btn btn-primary btn-sm" href="#">
-                                                    <i class="fas fa-flag">
-                                                    </i>
-                                                    Selesai
-                                                </a></td>
-                                        </tr>
-                                     @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
+                            <div id="listnya"></div>
+
                         </div>
                         <!-- /.card-body -->
 
@@ -173,12 +138,27 @@
 
         </footer>
 
-<script language="javascript">
-setTimeout(function(){
-   window.location.reload(1);
-}, 1000);
-</script>
+{{-- <script language="javascript">
 
+</script> --}}
+<script>
+
+     window.onload = function () {
+    getList();
+//  setTimeout(function(){
+//  window.location.reload(1);
+// }, 1000);
+     }
+function getList() {
+    $.ajax({
+        url: "/dashList",
+        method: "GET",
+    }).done(function (response) {
+        $('#listnya').html(response);
+    }).fail(function (jqXHR, textStatus) {});
+}
+
+</script>
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
