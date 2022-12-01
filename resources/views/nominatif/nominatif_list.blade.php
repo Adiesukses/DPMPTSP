@@ -1,7 +1,8 @@
 {{-- @extends('layout.home')
 @section('halaman') --}}
+
 <div class="table-responsive">
-    <table class="table m-0" id="dataxxx">
+    <table class="table m-0" id="list_tb">
         <thead>
             <tr>
                 <th>NO</th>
@@ -50,7 +51,7 @@
 </div>
 <script>
 $(document).ready(function () {
-    $('#dataxxx').DataTable();
+    $('#list_tb').DataTable();
 });
 </script>
 {{-- 

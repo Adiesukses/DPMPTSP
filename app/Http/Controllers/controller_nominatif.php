@@ -13,9 +13,8 @@ class controller_nominatif extends Controller
      */
 
     public function index()
-    {
-        
-        return view('nominatif.nominatif');
+    {  
+        return view('nominatif/nominatif');
     }
 
     /**
@@ -29,7 +28,8 @@ class controller_nominatif extends Controller
 
         $data=$request->except(['_token']);
         model_nominatif::insert($data);
-        //return redirect('Nominatif')->with('message','Operation Successful !');
+      //return redirect('/nominatif')->with('success','Operation Successful !');
+        // session()->flash('success','Operation Successful !');
     }
 
         public function update(Request $request, $id)

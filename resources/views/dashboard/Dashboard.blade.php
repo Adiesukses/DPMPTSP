@@ -75,22 +75,22 @@
                         <h3 class="card-title">SERAPAN ANGGARAN</h3>
 
                         <div class="card-tools">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                                <i class="fas fa-wrench"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a href="#" class="dropdown-item">Ubah Data</a>
-                                <a href="#" class="dropdown-item">Catatan</a>
-                                <a href="#" class="dropdown-item">Something else here</a>
-                                <a class="dropdown-divider"></a>
-                                <a href="#" class="dropdown-item">Separated link</a>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fas fa-wrench"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <a href="#" class="dropdown-item">Ubah Data</a>
+                                    <a href="#" class="dropdown-item">Catatan</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                    <a class="dropdown-divider"></a>
+                                    <a href="#" class="dropdown-item">Separated link</a>
+                                </div>
                             </div>
-                        </div>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                 <i class="fas fa-minus"></i>
                             </button>
-   
+
                             <button type="button" class="btn btn-tool" data-card-widget="remove">
                                 <i class="fas fa-times"></i>
                             </button>
@@ -208,27 +208,28 @@
                     <div class="card-header border-transparent">
                         <h3 class="card-title">AGENDA KEGIATAN</h3>
                         <div class="card-tools">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                                <i class="fas fa-wrench"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
-                                    Kegiatan</a>
-                                <a href="#" class="dropdown-item">Catatan</a>
-                                <a href="#" class="dropdown-item">Something else here</a>
-                                <a class="dropdown-divider"></a>
-                                <a href="#" class="dropdown-item">Separated link</a>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fas fa-wrench"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <a href="#" class="dropdown-item" data-toggle="modal"
+                                        data-target="#modal-tambah">Tambah
+                                        Kegiatan</a>
+                                    <a href="#" class="dropdown-item">Catatan</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                    <a class="dropdown-divider"></a>
+                                    <a href="#" class="dropdown-item">Separated link</a>
+                                </div>
                             </div>
-                        </div>
-                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                              <i class="fas fa-minus"></i>
-                          </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
 
-                          <button type="button" class="btn btn-tool" data-card-widget="remove">
-                              <i class="fas fa-times"></i>
-                          </button>
-                      </div>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
@@ -247,7 +248,7 @@
                                 </thead>
                                 <tbody>
                                     @php
-                                    $i=1;  
+                                    $i=1;
                                     @endphp
                                     <tr>
                                         @foreach ($data1 as $keg)
@@ -289,17 +290,17 @@
             <div class="modal-body">
                 <form id="ikitambah" action="" method="POST">
                     @csrf
-                 
-                        <div class="form-group col-md-12">
-                            <label>KEGIATAN</label>
-                            <textarea name="kegiatan" class="form-control" required></textarea>
-                        </div>
 
-                        <div class="form-group col-md-12">
-                            <label>TANGGAL</label>
-                            <input name="tanggal" type="date" class="form-control" required>
-                        </div>
-                
+                    <div class="form-group col-md-12">
+                        <label>KEGIATAN</label>
+                        <textarea name="kegiatan" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label>TANGGAL</label>
+                        <input name="tanggal" type="date" class="form-control" required>
+                    </div>
+
                     <div class="form-group col-md-12">
                         <label>TEMPAT</label>
                         <input name="tempat" type="text" class="form-control" required>
