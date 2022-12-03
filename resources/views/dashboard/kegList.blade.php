@@ -6,6 +6,7 @@
                 <th>ACARA/KEGIATAN</th>
                 <th>TANGGAL</th>
                 <th>TEMPAT</th>
+                <th>WAKTU</th>
                 <th>KETERANGAN</th>
                 <th>DISPOSISI</th>
                 <th>AKSI</th>
@@ -19,8 +20,9 @@
                 @foreach ($data as $keg)
                 <td>{{ $i++ }}</td>
                 <td>{{ $keg->kegiatan }}</td>
-                <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
+                <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }}</td>
                 <td>{{ $keg->tempat }}</td>
+                <td>{{ $keg->waktu }}</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                 <td class="project-actions text-left">

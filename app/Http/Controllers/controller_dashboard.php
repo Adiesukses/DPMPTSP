@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
 use App\Models\model_dashboard;
-use App\Models\model_kegiatan;
+
 
 class controller_dashboard extends Controller
 {
@@ -17,7 +17,7 @@ class controller_dashboard extends Controller
     public function index()
     {
         $data=model_nominatif::all()->count();
-        $data1=model_dashboard::all();
+        $data1=model_dashboard::all()->sortBy('tanggal');
        return view('dashboard/dashboard')->with([
         'data' => $data,
         'data1'=>$data1
@@ -26,21 +26,21 @@ class controller_dashboard extends Controller
     }
     public function index2()
     {
-        $data=model_kegiatan::all();
+        $data=model_dashboard::all()->sortBy('tanggal');
         return view('dashboard/dashboard_user')->with([
          'data' => $data
         ]); 
     }
     public function listData(Request $req)
     {
-        $data = model_dashboard::all();
+        $data = model_dashboard::all()->sortBy('tanggal');
         return view('dashboard/kegList')->with([
             'data' => $data
         ]);
     }
     public function listData2(Request $req)
     {
-        $data = model_dashboard::all();
+        $data = model_dashboard::all()->sortBy('tanggal');
         return view('dashboard/kegList2')->with([
             'data' => $data
         ]);

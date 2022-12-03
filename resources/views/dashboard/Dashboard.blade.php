@@ -254,29 +254,53 @@
             <div class="modal-body">
                 <form id="ikitambah" action="{{ ('/tambahKeg') }}" method="POST">
                     @csrf
-                    <div class="form-group col-md-12">
-                        <label>KEGIATAN</label>
-                        <textarea name="kegiatan" class="form-control" required></textarea>
+                    <div class="form-group row">
+                        <div class="form-group col-md-12">
+                            <label>KEGIATAN</label>
+                            <textarea name="kegiatan" class="form-control" required></textarea>
+                        </div>
                     </div>
-
-                    <div class="form-group col-md-12">
-                        <label>TANGGAL</label>
-                        <input name="tanggal" type="date" class="form-control" required>
+                    <div class="form-group row">
+                        <div class="col-md-6 ">
+                            <label>TANGGAL</label>
+                            <input name="tanggal" type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>WAKTU</label>
+                            <input name="waktu" type="text" class="form-control" required>
+                        </div>
                     </div>
-
-                    <div class="form-group col-md-12">
-                        <label>TEMPAT</label>
-                        <input name="tempat" type="text" class="form-control" required>
+                    <div class="form-group row">
+                        <div class="form-group col-md-12">
+                            <label>TEMPAT</label>
+                            <textarea name="tempat" class="form-control" required></textarea>
+                        </div>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label>DISPOSISI</label>
-                        <input name="disposisi" type="text" class="form-control" required>
+                    <div class="form-group row">
+                        <div class="form-group col-md-12">
+                            <label>DISPOSISI</label>
+                            <select name="disposisi" class="form-control select2 select2-hidden-accessible"
+                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option selected="selected" data-select2-id="3">--Disposisi--</option>
+                                <option>Kasubbag Umum</option>
+                                <option>Kasubbag Umum & Staff Perencanaan</option>
+                                <option>Kasubbag Umum & Staff Kepegawaian </option>
+                                <option>Kasubbag Umum & Bendahara </option>
+                                <option>Bendahara</option>
+                                <option>Bendahara & Pembantu Bendahara</option>
+                                <option>Pembantu Bendahara</option>
+                                <option>Staff Staff Perencanaan</option>
+                                <option>Staff Kepegawaian</option>
+                                <option>Arsiparis</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label>KETERANGAN</label>
-                        <textarea name="keterangan" class="form-control" required></textarea>
+                    <div class="form-group row">
+                        <div class="form-group col-md-12">
+                            <label>KETERANGAN</label>
+                            <textarea name="keterangan" class="form-control" required></textarea>
+                        </div>
                     </div>
-
                     <div class="form-group col-md-12">
                         <label></label>
                         <button type="submit" class="btn btn-primary float-right">KIRIM DATA</button>

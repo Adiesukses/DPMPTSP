@@ -107,8 +107,8 @@
                         <div class="form-group col-md-6">
                             <label>PENGIKUT</label>
                             <select name="nama" class="form-control select2 select2-hidden-accessible"
-                                data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                <option value="MADA BAYU AJI" data-select2-id="3">MADA BAYU AJI</option>
+                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option value="MADA BAYU AJI">MADA BAYU AJI</option>
                                 @foreach ($nominatif as $peg )
                                 <option value="{{ $peg->nama }}">{{ $peg->nama }}</option>
                                 @endforeach
@@ -128,8 +128,9 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>KENDARAAN</label>
-                            <select name="kendaraan" class="form-control select2 select2-hidden-accessible" required>
-                                <option value="" data-select2-id="3">-Pilih Kendaraan-</option>
+                            <select name="kendaraan" class="form-control select2 select2-hidden-accessible"
+                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option value="" required>-Pilih Kendaraan-</option>
                                 <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
                                 <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
                                 <option value="Kendaraan Umum (Pesawat)">Kendaraan Umum (Pesawat)</option>
@@ -141,7 +142,7 @@
                         <div class="form-group col-md-6">
                             <label>PPTK</label>
                             <select name="pptk" class="form-control select2 select2-hidden-accessible"
-                                data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                                 <option value="" required>-Pilih PPTK-</option>
                                 @foreach ($nominatif as $nana)
                                 <option value="{{ $nana->nama }}">{{ $nana->nama }}</option>

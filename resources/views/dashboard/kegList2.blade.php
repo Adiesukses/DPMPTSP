@@ -6,9 +6,10 @@
                 <th>ACARA/KEGIATAN</th>
                 <th>TANGGAL</th>
                 <th>TEMPAT</th>
+                <th>WAKTU</th>
                 <th>KETERANGAN</th>
                 <th>DISPOSISI</th>
-                <th>AKSI</th>
+                <th>STATUS</th>
             </tr>
         </thead>
         <tbody>
@@ -19,12 +20,14 @@
                 @foreach ($data as $keg)
                 <td>{{ $i++ }}</td>
                 <td>{{ $keg->kegiatan }}</td>
-                <td>{{ date('d F Y',strtotime($keg->tanggal)) }}</td>
+                <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }}</td>
+
                 <td>{{ $keg->tempat }}</td>
+                <td>{{ $keg->waktu }}</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                 <td class="project-actions text-left">
-                    <a class="btn btn-danger btn-sm"  href="javascript:hapus({{ $keg->id }})">
+                    <a class="btn btn-danger btn-sm disabled"  href="javascript:hapus({{ $keg->id }})">
                         <i class="fas fa-flag">
                         </i>
                         Selesai

@@ -10,11 +10,13 @@ class model_dashboard extends Model
     use HasFactory;
     protected $table='kegiatan';
     protected $fillable=[
-    'kegiatan',
+    'acara',
     'tanggal',
     'tempat',
+    'waktu',
     'keterangan',
     'disposisi'
 
     ];
 }
+
