@@ -12,13 +12,13 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 </head>
 
-<body onload = "getList();" >
+<body onload = "getList();"class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" >
 
     <section class="content">
         <div class="col-sm-6 mb-4">
@@ -29,7 +29,6 @@
                         <div class="card-body p-0">
                             <div id="listnya"></div>
                         </div>
-                        <!-- /.card-body -->
 
                     </div>
                 </div>
@@ -47,18 +46,11 @@
 
         </footer>
 
-
-
-<script>
-
-setInterval(function(){
-    getList();
-},1);
-</script>
 <script>     
+
 function getList() {
     $.ajax({
-        url: "/dashList",
+        url: "/dashList2",
         method: "GET",
     }).done(function (response) {
 
@@ -66,6 +58,9 @@ function getList() {
 
     }).fail(function (jqXHR, textStatus) {});
 } 
+    setInterval(function(){
+        getList();
+    },1000);
 // function refresh() {
 // $('#listnya').load(location.href + "#listnya");
 // } 
@@ -78,14 +73,7 @@ function getList() {
     <!-- Bootstrap -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-
-    <script src="plugins/chart.js/Chart.min.js"></script>
-
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard2.js"></script>
-
+   
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 
 

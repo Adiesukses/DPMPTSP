@@ -38,7 +38,13 @@ class controller_dashboard extends Controller
             'data' => $data
         ]);
     }
-
+    public function listData2(Request $req)
+    {
+        $data = model_dashboard::all();
+        return view('dashboard/kegList2')->with([
+            'data' => $data
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *
