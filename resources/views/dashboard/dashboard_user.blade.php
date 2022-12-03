@@ -18,18 +18,16 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 </head>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body onload = "getList();" >
+
     <section class="content">
         <div class="col-sm-6 mb-4">
             <h1 class="m-0">AGENDA SEKRETARIAT</h1>
         </div>
         <div class="container-fluid">
-
-
                         <!-- /.card-header -->
                         <div class="card-body p-0">
                             <div id="listnya"></div>
-
                         </div>
                         <!-- /.card-body -->
 
@@ -49,27 +47,28 @@
 
         </footer>
 
-{{-- <script language="javascript">
 
-</script> --}}
+
 <script>
 
-     window.onload = function () {
+setInterval(function(){
     getList();
-    
-//  setTimeout(function(){
-//  window.location.reload(1);
-// }, 1000);
-     }
+},1);
+</script>
+<script>     
 function getList() {
     $.ajax({
         url: "/dashList",
         method: "GET",
     }).done(function (response) {
+
         $('#listnya').html(response);
 
     }).fail(function (jqXHR, textStatus) {});
-}
+} 
+// function refresh() {
+// $('#listnya').load(location.href + "#listnya");
+// } 
 
 </script>
 

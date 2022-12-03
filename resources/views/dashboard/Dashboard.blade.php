@@ -324,5 +324,13 @@ function getList() {
         $('#listnya').html(response);
     }).fail(function (jqXHR, textStatus) {});
 }
+function hapus(ikiid) {
+    $.ajax({
+        url: "/dashDelete"+ikiid,
+        method: "GET",
+    }).done(function (response) {
+      getList();
+    }).fail(function (jqXHR, textStatus) {});
+}
 </script>
 @endsection

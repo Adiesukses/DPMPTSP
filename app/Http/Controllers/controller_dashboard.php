@@ -103,7 +103,8 @@ class controller_dashboard extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item=model_dashboard::findorfail($id);
+        $item->delete();
     }
 
 

@@ -215,3 +215,13 @@
 </body>
 
 </html>
+<script>
+    function table(){
+const xhttp=new XMLHttpRequest();
+xhttp.onload=function(){
+document.getElementById("table").innerHTML=this.responseText;
+}
+xhttp.open("GET",{{ '/dashList' }});
+xhttp.send();
+    }
+</script>

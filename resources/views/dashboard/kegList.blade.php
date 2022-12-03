@@ -24,7 +24,7 @@
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                 <td class="project-actions text-left">
-                    <a class="btn btn-primary btn-sm" href="#">
+                    <a class="btn btn-danger btn-sm"  href="javascript:hapus({{ $keg->id }})">
                         <i class="fas fa-flag">
                         </i>
                         Selesai
@@ -38,5 +38,5 @@
     $(document).ready(function () {
         $('#list_keg').DataTable();
     });
-  
+
     </script>
