@@ -1,3 +1,4 @@
+
 <div class="table-responsive" >
     <table class="table m-0"id="list_keg2">
         <thead>
@@ -20,7 +21,9 @@
                 @foreach ($data as $keg)
                 <td>{{ $i++ }}</td>
                 <td>{{ $keg->kegiatan }}</td>
-                <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }}</td>
+                {{-- $today = Carbon::now()->isoFormat('dddd, D MMMM Y'); --}}
+             <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }} </td>
+                {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
                 <td>{{ $keg->tempat }}</td>
                 <td>{{ $keg->waktu }}</td>

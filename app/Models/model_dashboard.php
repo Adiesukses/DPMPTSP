@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Carbon;
 class model_dashboard extends Model
 {
     use HasFactory;
@@ -18,5 +18,11 @@ class model_dashboard extends Model
     'disposisi'
 
     ];
+    public function getCreatedAtAttribute()
+    {
+    return Carbon::parse($this->attributes['tanggal'])
+    ->translatedFormat('l, d F y');
+    }
+
 }
 
