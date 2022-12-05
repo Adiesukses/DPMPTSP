@@ -19,6 +19,7 @@ use App\Http\Controllers\controller_agenda;
 |
 */
 Route::get('/',[controller_dashboard::class,'index']);
+Route::get('/x',[controller_dashboard::class,'indexx']);
 Route::get('/user',[controller_dashboard::class,'index2']);
 Route::get('/Dashboard', [controller_dashboard::class,'index']);
 Route::get('/dashList', [controller_dashboard::class,'listData']);

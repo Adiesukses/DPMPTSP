@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
 use App\Models\model_dashboard;
-
+use Carbon\Carbon;
 
 class controller_dashboard extends Controller
 {
@@ -111,7 +111,25 @@ class controller_dashboard extends Controller
         $item=model_dashboard::findorfail($id);
         $item->delete();
     }
+    public function indexx()
+    { 
+                    //  $fdate=Carbon::createFromFormat('m/d/Y H:i:s', '12/01/2020 10:20:00');
+                    // $dina=Carbon::createFromFormat('m/d/Y H:i:s', '12/01/2020 10:20:00');
+                    // $interval= $$fdate->diff( $dina);
+                    // $days=$interval->format('%a') + 1;
+                    // echo $days;
 
+
+                    $firstDate = Carbon::parse('today');
+                    $secondDate = Carbon::parse('2022-12-26');
+                    
+                    // using gte()
+                    if ($firstDate->gte($secondDate)) { 
+                        dd($firstDate . ' is lebih besar ' . $secondDate);
+                    } else {
+                        dd($firstDate . ' is not greater than or equal to ' . $secondDate);
+                    }
+    }
 
 
 

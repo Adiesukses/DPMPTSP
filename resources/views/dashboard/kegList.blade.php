@@ -1,3 +1,4 @@
+
 <div class="table-responsive" >
     <table class="table m-0"id="list_keg">
         <thead>
@@ -10,6 +11,7 @@
                 <th>KETERANGAN</th>
                 <th>DISPOSISI</th>
                 <th>AKSI</th>
+
             </tr>
         </thead>
         <tbody>

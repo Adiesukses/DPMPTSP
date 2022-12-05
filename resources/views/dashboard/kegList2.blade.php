@@ -1,4 +1,10 @@
-
+{{-- @php
+      $fdate=$data->tanggal;
+      $datetime1= new DateTime($fdate);
+      $datetime2= new DateTime('now');
+      $interval= $datetime2->diff( $datetime1);
+      $days=$interval->format('%a') + 1;
+@endphp --}}
 <div class="table-responsive" >
     <table class="table m-0"id="list_keg2">
         <thead>
@@ -16,6 +22,7 @@
         <tbody>
             @php
             $i=1;
+
             @endphp
             <tr>
                 @foreach ($data as $keg)
@@ -25,18 +32,33 @@
              <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }} </td>
                 {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
-                <td>{{ $keg->tempat }}</td>
+                <td >{{ $keg->tempat }}</td>
                 <td>{{ $keg->waktu }}</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
-                <td class="project-actions text-left">
-                    <a class="btn btn-danger btn-sm disabled"  href="javascript:hapus({{ $keg->id }})">
-                        <i class="fas fa-flag">
-                        </i>
-                        Selesai
-                    </a></td>
-            </tr>
+                  <td>@php                     
+                    $firstDate = Carbon\Carbon::parse('today');
+                    $secondDate = Carbon\Carbon::parse($keg->tanggal);
+                    @endphp
+                
+                    @if ($firstDate->eq($secondDate)) 
+                        <a class="btn btn-danger btn-sm">
+                            <i class="fas fa-flag">
+                            </i>
+                            Selesai
+                        </a>
+                    @else 
+                        <a class="btn btn-secondary btn-sm">
+                            <i class="fas fa-flag">
+                            </i>
+                            Selesai
+                        </a>
+                    
+                    @endif
+              </td>  
+</tr>  
          @endforeach
+                
         </tbody>
     </table>
 </div>
