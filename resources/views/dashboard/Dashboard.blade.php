@@ -330,7 +330,7 @@
 
         $('#modal-tambah').on('hidden.bs.modal', function (e) {
             $(this)
-                .find("input,textarea,select")
+                .find("input,textarea,select2")
                 .val('')
                 .end()
                 .find("input[type=checkbox], input[type=radio]")
