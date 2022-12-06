@@ -117,7 +117,20 @@ class controller_dashboard extends Controller
         // echo \Carbon\Carbon::now()->isoFormat('l, d F Y H:i');
         // Sabtu, 04 Maret 2017 07:38
         
-$today = Carbon::now()->isoFormat('dddd, D MMMM Y');
-echo $today;
-    }
+// $today = Carbon::now()->isoFormat('dddd, D MMMM Y');
+// echo $today;
+// $to = \Carbon\Carbon::parse($request->to);
+// $from = \Carbon\Carbon::parse($request->from);
+
+// $time2 = \Carbon\Carbon::createFromTimeString('21:57:00');
+// $time3 = now();
+
+// if ($time3->gte($time2) && ) {
+//     var_dump('yes');
+// } else {
+//     var_dump('no');
+    
+// }
+
+}
 }

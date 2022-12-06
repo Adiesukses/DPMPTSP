@@ -34,27 +34,30 @@
                 {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
                 <td >{{ $keg->tempat }}</td>
-                <td>{{ $keg->waktu }} WIB</td>
+                <td>{{ $keg->waktu}} WIB</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                   <td>@php                     
                     $firstDate = Carbon\Carbon::parse('today');
                     $secondDate = Carbon\Carbon::parse($keg->tanggal);
+                    $time1 = now();
+                    $time2 = Carbon\Carbon::createFromTimeString($keg->waktu);
                     @endphp
-                
-                    @if ($firstDate->eq($secondDate)) 
+                    @if($secondDate ->eq($firstDate) && $time1 ->gte($time2))
                         <a class="btn btn-info btn-sm">
-                            <i class="fas fa-flag">
-                            </i>
-                            Aktif
-                        </a>
+                        <i class="fas fa-flag">
+                        </i>
+                        Aktif
+                    </a>
+                    {{-- <audio autoplay>
+                        <source src="floating.mp3" type="audio/mp3">
+                    </audio> --}}
                     @else 
-                        <a class="btn btn-secondary btn-sm">
+                            <a class="btn btn-secondary btn-sm">
                             <i class="fas fa-flag">
                             </i>
                             Otewe
                         </a>
-                    
                     @endif
               </td>  
 </tr>  
