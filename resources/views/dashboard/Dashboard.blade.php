@@ -268,7 +268,7 @@
                         </div>
                         <div class="col-md-6">
                             <label>WAKTU</label>
-                            <input name="waktu" type="text" class="form-control" required>
+                            <input name="waktu" type="time" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">

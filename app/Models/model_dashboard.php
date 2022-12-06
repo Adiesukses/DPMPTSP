@@ -17,11 +17,11 @@ class model_dashboard extends Model
     'keterangan',
     'disposisi'
 ];
-    public function getCreatedAtAttribute()
-{
-return Carbon::parse($this->attributes['created_at'])
-->translatedFormat('l, d F y');
-}
+//     public function getCreatedAtAttribute()
+// {
+// return Carbon::parse($this->attributes['created_at'])
+// ->translatedFormat('l, d F y');
+// }
 
 }
 

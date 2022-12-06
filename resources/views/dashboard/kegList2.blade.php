@@ -34,7 +34,7 @@
                 {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
                 <td >{{ $keg->tempat }}</td>
-                <td>{{ $keg->waktu }}</td>
+                <td>{{ $keg->waktu }} WIB</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                   <td>@php                     

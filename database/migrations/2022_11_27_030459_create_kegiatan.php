@@ -17,7 +17,7 @@ class CreateKegiatan extends Migration
             $table->bigincrements('id');
             $table->text('kegiatan');
             $table->date('tanggal');
-            $table->text('waktu');
+            $table->time('waktu');
             $table->text('tempat');
             $table->text('keterangan');
             $table->text('disposisi');

@@ -26,7 +26,7 @@
                 $today = Carbon\Carbon::parse($keg->tanggal)->isoFormat('dddd, D MMMM Y');@endphp
                 <td>{{ $today}} </td>
                 <td>{{ $keg->tempat }}</td>
-                <td>{{ $keg->waktu }}</td>
+                <td>{{ $keg->waktu }} WIB</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
                 <td class="project-actions text-left">
