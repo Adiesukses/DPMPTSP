@@ -22,7 +22,9 @@
                 @foreach ($data as $keg)
                 <td>{{ $i++ }}</td>
                 <td>{{ $keg->kegiatan }}</td>
-                <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }}</td>
+                @php 
+                $today = Carbon\Carbon::parse($keg->tanggal)->isoFormat('dddd, D MMMM Y');@endphp
+                <td>{{ $today}} </td>
                 <td>{{ $keg->tempat }}</td>
                 <td>{{ $keg->waktu }}</td>
                 <td>{{ $keg->keterangan }}</td>
