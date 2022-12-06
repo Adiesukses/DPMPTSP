@@ -28,8 +28,9 @@
                 @foreach ($data as $keg)
                 <td>{{ $i++ }}</td>
                 <td>{{ $keg->kegiatan }}</td>
-                {{-- $today = Carbon::now()->isoFormat('dddd, D MMMM Y'); --}}
-             <td>{{ date('l, d F Y',strtotime($keg->tanggal)) }} </td>
+                @php 
+                $today = Carbon\Carbon::parse($keg->tanggal)->isoFormat('dddd, D MMMM Y');@endphp
+                <td>{{ $today}} </td>
                 {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
                 <td >{{ $keg->tempat }}</td>
@@ -42,16 +43,16 @@
                     @endphp
                 
                     @if ($firstDate->eq($secondDate)) 
-                        <a class="btn btn-danger btn-sm">
+                        <a class="btn btn-info btn-sm">
                             <i class="fas fa-flag">
                             </i>
-                            Selesai
+                            Aktif
                         </a>
                     @else 
                         <a class="btn btn-secondary btn-sm">
                             <i class="fas fa-flag">
                             </i>
-                            Selesai
+                            Otewe
                         </a>
                     
                     @endif

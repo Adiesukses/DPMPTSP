@@ -113,24 +113,11 @@ class controller_dashboard extends Controller
     }
     public function indexx()
     { 
-                    //  $fdate=Carbon::createFromFormat('m/d/Y H:i:s', '12/01/2020 10:20:00');
-                    // $dina=Carbon::createFromFormat('m/d/Y H:i:s', '12/01/2020 10:20:00');
-                    // $interval= $$fdate->diff( $dina);
-                    // $days=$interval->format('%a') + 1;
-                    // echo $days;
-
-
-                    $firstDate = Carbon::parse('today');
-                    $secondDate = Carbon::parse('2022-12-26');
-                    
-                    // using gte()
-                    if ($firstDate->gte($secondDate)) { 
-                        dd($firstDate . ' is lebih besar ' . $secondDate);
-                    } else {
-                        dd($firstDate . ' is not greater than or equal to ' . $secondDate);
-                    }
+        \Carbon\Carbon::setLocale('id');
+        // echo \Carbon\Carbon::now()->isoFormat('l, d F Y H:i');
+        // Sabtu, 04 Maret 2017 07:38
+        
+$today = Carbon::now()->isoFormat('dddd, D MMMM Y');
+echo $today;
     }
-
-
-
 }

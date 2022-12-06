@@ -16,13 +16,14 @@ class model_dashboard extends Model
     'waktu',
     'keterangan',
     'disposisi'
-
-    ];
-    // public function getCreatedAtAttribute()
-    // {
-    // return Carbon::parse($this->attributes['tanggal'])
-    // ->translatedFormat('l, d F y');
-    // }
+];
+    public function getCreatedAtAttribute()
+{
+return Carbon::parse($this->attributes['created_at'])
+->translatedFormat('l, d F y');
+}
 
 }
+
+
 
