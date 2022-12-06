@@ -2,9 +2,7 @@
 @extends('layout.home')
 @section('halaman')
 <section class="content">
-    <audio autoplay>
-        <source src="bel.mp3" type="audio/mp3">
-    </audio> 
+
     <div class="col-sm-6 mb-4">
         <h1 class="m-0">SEKRETARIAT DPMPTSP</h1>
     </div>
