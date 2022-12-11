@@ -20,7 +20,6 @@
 </head>
 
 <body onload = "getList();"class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" >
-
     <section class="content">
         <div class="col-sm-6 mb-4">
             <h1 class="m-0">AGENDA SEKRETARIAT</h1>
@@ -28,7 +27,7 @@
         <div class="container-fluid">
                         <!-- /.card-header -->
                         <div class="card-body p-0">
-                            <div id="listnya"></div>
+                            <div id="listnya2"></div>
                         </div>
 
                     </div>
@@ -49,16 +48,17 @@ function getList() {
         method: "GET",
     }).done(function (response) {
 
-        $('#listnya').html(response);
+        $('#listnya2').html(response);
 
     }).fail(function (jqXHR, textStatus) {});
 } 
+
     setInterval(function(){
-        getList();
-    },1000);
-// function refresh() {
-// $('#listnya').load(location.href + "#listnya");
-// } 
+ getList();
+},1000);
+function refresh() {
+$('#listnya').load(location.href + "#listnya");
+} 
 
 </script>
 

@@ -1,10 +1,3 @@
-{{-- @php
-      $fdate=$data->tanggal;
-      $datetime1= new DateTime($fdate);
-      $datetime2= new DateTime('now');
-      $interval= $datetime2->diff( $datetime1);
-      $days=$interval->format('%a') + 1;
-@endphp --}}
 <div class="table-responsive" >
     <table class="table m-0"id="list_keg2">
         <thead>
@@ -49,9 +42,9 @@
                         </i>
                         Aktif
                     </a>
+
                     <script>
-                    //  window.location.reload();   
-                    // $('#modale').modal('show');
+// $('#modale').modal('show');
                     </script> 
                     {{-- <audio autoplay>
                         <source src="floating.mp3" type="audio/mp3">
