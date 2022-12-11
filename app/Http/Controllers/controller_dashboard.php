@@ -65,7 +65,6 @@ class controller_dashboard extends Controller
         $data=$request->except(['_token']);
         model_dashboard::insert($data);
     }
-
     /**
      * Display the specified resource.
      *
