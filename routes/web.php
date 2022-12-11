@@ -40,6 +40,7 @@ Route::post('/nominatifTambah', [controller_nominatif::class,'store']);
 Route::post('/nominatifData', [controller_nominatif::class,'getData']);
 Route::post('/nomUpdate/{id}', [controller_nominatif::class,'update']);
 Route::get('/nomDelete{id}', [controller_nominatif::class,'destroy']);
+Route::get('/export', [controller_nominatif::class,'exportNominatif']);
 //-------------------------AGENDA---------------------------------------------
 Route::get('/agenda', [controller_agenda::class,'index']);
 Route::get('/agendaList', [controller_agenda::class,'listData']);

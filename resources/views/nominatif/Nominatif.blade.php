@@ -14,8 +14,7 @@
                         <div class="dropdown-menu dropdown-menu-right" role="menu">
                             <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
                                 Pegawai</a>
-                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Upload
-                                Data</a>
+                            <a href="{{ url('/export' )}}" class="dropdown-item">Download Nominatif</a>
                         </div>
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                             <i class="fas fa-minus"></i>

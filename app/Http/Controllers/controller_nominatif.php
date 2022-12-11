@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
-
+use App\Exports\NominatifExport;
+use Maatwebsite\Excel\Facades\Excel;
 class controller_nominatif extends Controller
 {
     /**
@@ -58,5 +59,9 @@ class controller_nominatif extends Controller
         return view('nominatif.nominatif_list')->with([
             'data' => $data
         ]);
+    }
+    public function exportNominatif()
+    {
+return Excel::download(new NominatifExport,'Nominatif_Pegawai.xlsx');
     }
 }
