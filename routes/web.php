@@ -41,6 +41,7 @@ Route::post('/nominatifData', [controller_nominatif::class,'getData']);
 Route::post('/nomUpdate/{id}', [controller_nominatif::class,'update']);
 Route::get('/nomDelete{id}', [controller_nominatif::class,'destroy']);
 Route::get('/export', [controller_nominatif::class,'exportNominatif']);
+Route::post('/import', [controller_nominatif::class,'importNominatif']);
 //-------------------------AGENDA---------------------------------------------
 Route::get('/agenda', [controller_agenda::class,'index']);
 Route::get('/agendaList', [controller_agenda::class,'listData']);

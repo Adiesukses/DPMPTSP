@@ -15,7 +15,8 @@
                             <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Tambah
                                 Pegawai</a>
                             <a href="{{ url('/export' )}}" class="dropdown-item">Download Nominatif</a>
-                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-tambah">Upload Nominatif</a>
+                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal-upload">Upload
+                                Nominatif</a>
                         </div>
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                             <i class="fas fa-minus"></i>
@@ -26,20 +27,46 @@
                     </div>
 
                 </div>
-                {{-- <div class="alert alert-success alert-block">
-                    <button type="button" class="close" data-dismiss="alert">×</button> 
-                    <strong>{{ session()->get('success') }}</strong>
-            </div> --}}
-            <!-- Tabel List -->
-            <div class="card-body p-0">
-                <div id="listnya"></div>
+
+                <!-- Tabel List -->
+                <div class="card-body p-0">
+                    <div id="listnya"></div>
+                </div>
+                <!-- ---------- -->
             </div>
-            <!-- ---------- -->
         </div>
-    </div>
 
 </section>
+<div class="modal fade" id="modal-upload" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">UPLOAD NOMINATIF</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
+                <form action="{{ url('/import') }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="col">
+
+                            <input type="file">
+                        </div>
+                        <div class="col">
+                            <button class="btn bg-primary float-right" type="submit"
+                                id="inputGroupFileAddon04">Send</button>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
 <!-- Modal Tambah---->
 <div class="modal fade" id="modal-tambah" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg">
