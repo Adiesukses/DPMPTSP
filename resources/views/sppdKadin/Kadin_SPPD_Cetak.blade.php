@@ -82,9 +82,9 @@
   </tr>
 </table>
 
-<table width="831" border="0">
+<table width="829" border="0">
   <tr>
-    <td width="823" height="1"><img src="{{ url('img/LINE.png') }}" width="820" height="4" /></td>
+    <td width="823" height="52"><img src="{{ url('img/LINE.png') }}" width="820" height="4" /></td>
   </tr>
 </table>
 <table width="831" border="0">
