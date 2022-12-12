@@ -15,7 +15,12 @@ class NominatifImport implements ToModel
     public function model(array $row)
     {
         return new model_nominatif([
-            //
+           'nama'=>$row[1],
+           'nip'=>$row[2],
+           'jabatan'=>$row[3],
+           'gol'=>$row[4],
+           'alamat'=>$row[5],
+           'no_hp'=>$row[6],
         ]);
     }
 }

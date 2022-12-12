@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <input type="file">
+                            <input type="file" name="file">
                         </div>
                         <div class="col">
                             <button class="btn bg-primary float-right" type="submit"
