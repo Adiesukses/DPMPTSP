@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_nominatif;
 use App\Exports\NominatifExport;
-use App\Exports\NominatifImport;
+use App\Imports\NominatifImport;
 use Maatwebsite\Excel\Facades\Excel;
 class controller_nominatif extends Controller
 {
@@ -63,14 +63,15 @@ class controller_nominatif extends Controller
     }
     public function exportNominatif()
     {
-return Excel::download(new NominatifExport,'Nominatif_Pegawai.xlsx');
+        return Excel::download(new NominatifExport,'Nominatif_Pegawai.xlsx');
     }
     public function importNominatif(Request $request)
     {
-$file = $request->$file('file');
-$namaFile=$file->getClientOriginalName();
-$file->move('DataPegawai',$namaFile);
-Excel::import(new NominatifImport,public_path('/DataPegawai'.$namaFile));
+        $file = $request->file('file');
+        $namaFile=$file->getClientOriginalName();
+        $file->move('DataPegawai',$namaFile);
+        Excel::import(new NominatifImport,public_path('DataPegawai/'.$namaFile));
+        return redirect ('nominatif');
     }
 
 }

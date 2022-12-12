@@ -20,7 +20,7 @@ class NominatifImport implements ToModel
            'jabatan'=>$row[3],
            'gol'=>$row[4],
            'alamat'=>$row[5],
-           'no_hp'=>$row[6],
+           'no_hp'=>$row[6]
         ]);
     }
 }
