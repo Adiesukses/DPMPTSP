@@ -206,7 +206,8 @@
     <td valign="top" class="style6"><span class="style6">b.</span></td>
     <td valign="top" class="style6"><span class="style6">Tanggal berangkat</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6"><span class="style6">{{ date('d F Y',strtotime($data->tanggal_berangkat)) }}</span></td>
+    @php $berangkat = Carbon\Carbon::parse($data->tanggal_berangkat)->isoFormat('D MMMM Y'); @endphp
+    <td valign="top" class="style6"><span class="style6">{{ $berangkat }}</span></td>
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
@@ -214,7 +215,8 @@
     <td valign="top" class="style6"><span class="style6">c.</span></td>
     <td valign="top" class="style6"><span class="style6">Tanggal harus kembali</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6"><span class="style6">{{ date('d F Y',strtotime($data->tanggal_kembali)) }}</span></td>
+    @php $kembali = Carbon\Carbon::parse($data->tanggal_kembali)->isoFormat('D MMMM Y'); @endphp
+    <td valign="top" class="style6"><span class="style6">{{ $kembali }}</span></td>
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
@@ -273,7 +275,8 @@
     <td height="27">&nbsp;</td>
     <td valign="top" class="style6"><span class="style6">Pada tanggal</span></td>
     <td valign="top" class="style6"><span class="style6">:</span></td>
-    <td valign="top" class="style6">{{ date('d F Y',strtotime($data->tanggal_kembali)) }}</td>
+    @php $today = Carbon\Carbon::parse($data->tanggal_sppd)->isoFormat('D MMMM Y'); @endphp
+    <td valign="top" class="style6">{{ $today }}</td>
   </tr>
 </table>
 <table width="831" border="0">

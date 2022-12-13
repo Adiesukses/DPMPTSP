@@ -51,9 +51,13 @@
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td>{{ $sppd->nama }}</td>
-                                    <td>{{ date('d F Y',strtotime($sppd->tanggal_sppd)) }}</td>
-                                    <td>{{ date('d F Y',strtotime($sppd->tanggal_berangkat)) }}</td>
-                                    <td>{{ date('d F Y',strtotime($sppd->tanggal_kembali)) }}</td>
+                                    @php $today = Carbon\Carbon::parse($sppd->tanggal_sppd)->isoFormat('D MMMM Y');@endphp
+                                    <td>{{ $today}} </td>
+                                    {{-- <td>{{ date('d F Y',strtotime($sppd->tanggal_sppd)) }}</td> --}}
+                                    @php $berangkat = Carbon\Carbon::parse($sppd->tanggal_berangkat)->isoFormat('D MMMM Y');@endphp
+                                    <td>{{ $berangkat}} </td>
+                                    @php $kembali = Carbon\Carbon::parse($sppd->tanggal_kembali)->isoFormat('D MMMM Y');@endphp
+                                    <td>{{ $kembali}} </td>
                                     <td class="col-2 " align="justify">{{ $sppd->tujuan }}</td>
                                     <td class="col-2 " align="justify">{{ $sppd->maksud }}</td>
 
