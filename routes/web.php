@@ -49,6 +49,10 @@ Route::post('/agendaTambah', [controller_agenda::class,'store']);
 Route::post('/agendaData', [controller_agenda::class,'getData']);
 Route::post('/agenUpdate/{id}', [controller_agenda::class,'update']);
 Route::get('/agenDelete{id}', [controller_agenda::class,'destroy']);
+//-------------------------DOKUMEN---------------------------------------------
+Route::get('/dok', function () {
+    return view('dokumen/dokumen');
+});
 Route::get('/dd', function () {
      return view('cc');
  });
