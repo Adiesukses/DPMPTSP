@@ -42,6 +42,26 @@
 
 <script>     
 
+<--
+function getList_() {
+    $.ajax({
+        url: "/dashList2",
+        method: "GET",
+    }).done(function (response) {
+
+        $('#listnya2').html(response);
+
+    }).fail(function (jqXHR, textStatus) {});
+}
+
+setInterval(function () {
+    getList();
+}, 1000);
+
+function refresh() {
+    $('#listnya').load(location.href + "#listnya");
+}
+
 function getList() {
     $.ajax({
         url: "/dashList2",
@@ -51,14 +71,15 @@ function getList() {
         $('#listnya2').html(response);
 
     }).fail(function (jqXHR, textStatus) {});
-} 
+}
 
-    setInterval(function(){
- getList();
-},1000);
+setInterval(function () {
+    getList();
+}, 1000);
+
 function refresh() {
-$('#listnya').load(location.href + "#listnya");
-} 
+    $('#listnya').load(location.href + "#listnya");
+}
 
 </script>
 

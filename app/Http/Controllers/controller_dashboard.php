@@ -44,6 +44,25 @@ class controller_dashboard extends Controller
             'data' => $data
         ]);
     }
+
+    public function showNotif(Request $req)
+    {
+        $data = model_dashboard::all()->sortBy('tanggal');
+
+        $firstDate = Carbon\Carbon::parse('today');
+        $secondDate = Carbon\Carbon::parse($keg->tanggal);
+        $time1 = now();
+        $time2 = Carbon\Carbon::createFromTimeString($keg->waktu);
+
+        $dataDetail = [];
+        foreach ($data as $val){
+            if($secondDate ->eq($firstDate) && $time1 ->gte($time2)){
+                array_push($dataDetail,$val);
+            }
+        }
+
+        return Response::json($data);
+    }
     /**
      * Show the form for creating a new resource.
      *

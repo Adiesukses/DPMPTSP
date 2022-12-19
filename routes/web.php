@@ -24,6 +24,7 @@ Route::get('/user',[controller_dashboard::class,'index2']);
 Route::get('/Dashboard', [controller_dashboard::class,'index']);
 Route::get('/dashList', [controller_dashboard::class,'listData']);
 Route::get('/dashList2', [controller_dashboard::class,'listData2']);
+Route::get('/datanotif', [controller_dashboard::class,'showNotif']);
 Route::post('/tambahKeg', [controller_dashboard::class,'store']);
 Route::get('/dashDelete{id}', [controller_dashboard::class,'destroy']);
 
