@@ -63,6 +63,10 @@
   </div>
 
 <script>
+var audio = document.createElement("AUDIO")
+document.body.appendChild(audio);
+audio.src = "./audio/notif.wav"
+
 var notifId = [];
 function getList() {
     $.ajax({
@@ -95,6 +99,7 @@ function cekNotif() {
 
             if(notifId[item['id']] == true){
                 $('#modal-notif').modal('show');
+                audio.play();
                 notifId[item['id']] = false;
             }
         });
