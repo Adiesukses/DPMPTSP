@@ -7,7 +7,7 @@
             <div class="btn-group float-right "><a href="" type="button" class="btn btn-warning mt-3"
                     data-toggle="modal" data-target="#modal-upload">Upload Dokumen</a></div>
         </div>
-        < !-- /.card-header -->
+       
             <div class="card-body p-0">
                 <div class="table-responsive">
                     <table class="table " id="list_keg2">
@@ -23,28 +23,20 @@
                         </thead>
                         <tbody>@php $i=1;
 
-                            @endphp <tr> {
-                                {
-                                -- @foreach ($data as $keg) --
-                                }
-                                }
+                            @endphp <tr> 
 
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                            </tr> {
-                            {
-                            -- @endforeach --
-                            }
-                            }
+                            </tr>
 
                         </tbody>
                     </table>
                 </div>
             </div>
-            < !-- /.card-body -->
+           
     </div>
 </section>
     <div class="modal fade" id="modal-upload" style="display: none;" aria-hidden="true">
@@ -55,16 +47,51 @@
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <form id="ikitambah" action="" method="POST">@csrf <div class="form-group ml-4 mt-3">
-                            <label>NAMA DOKUMEN</label><input type="text" name="nama" class="form-control" required></div>
-                        <div class="form-group ml-4 mt-3"><label>TAHUN</label><input type="text" name="nip"
-                                class="form-control" required></div>
-                        <div class="form-group ml-4 mt-3"><label>JENIS DOKUMEN</label><input type="text" name="jabatan"
-                                class="form-control" required></div>
-                        <div class="form-group ml-4 mt-3"><label>GOLONGAN</label><input type="text" name="gol">
+                    <form id="ikitambah" action="" method="POST">
+                        @csrf 
+                        <div class="form-group row">              
+                            <div class="col-md-4">
+                                 <label>TAHUN</label>
+                                 <select name="tahun" class="form-control select2 select2-hidden-accessible"
+                                 style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                
+                                 <option value="2022">2022</option>
+                                 <option value="2023">2023</option>
+                                 <option value="2024">2024</option>
+                                 <option value="2025">2025</option>
+                             </select>
+                            </div>
+                            <div class="col">
+                                <label>JENIS DOKUMEN</label>
+                                <select name="tahun" class="form-control select2 select2-hidden-accessible"
+                                    style="width: 100%;" data-select2-id="2" tabindex="-2" aria-hidden="true">
+                                   
+                                    <option value="Perencanaan">Perencanaan</option>
+                                    <option value="Kepegawaian">Kepegawaian</option>
+                                </select>   
+                            </div>
 
-                        <div class="form-group ml-4 mt-3 text-end"><button type="submit"
-                                class="btn btn-primary float-right">KIRIM DATA</button></div>
+                        </div>
+                        <div class="form-group">
+                            <label>NAMA DOKUMEN</label>
+                            <input type="text" name="nip"class="form-control" required>
+                                   
+                    </div>
+                                
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <label class="custom-file-label" for="exampleInputFile"></label>
+                          </div>
+                          <div class="input-group-append">
+                            <button class="btn bg-primary" type="submit"
+                            id="inputGroupFileAddon04">Upload</button>
+                          </div>
+                        </div>
+                      </div>
+                       
                     </form>
                 </div>
             </div>
