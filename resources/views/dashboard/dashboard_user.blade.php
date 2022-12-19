@@ -38,30 +38,32 @@
 
 </section>
 
+<div class="modal fade" id="modal-notif" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Notifikasi Kegiatan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Disposisi : <br><h4><span id="notifDisposisi"></span></h4></br>
+          Nama Kegiatan : <br><h4><span id="notifKegiatan"></span></h4><br>
+          Tanggal Kegiatan : <br><h4><span id="notifTanggal"></span></h4><br>
+          Lokasi : <br><h4><span id="notifTempat"></span></h4><br>
 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script>     
-
-<--
-function getList_() {
-    $.ajax({
-        url: "/dashList2",
-        method: "GET",
-    }).done(function (response) {
-
-        $('#listnya2').html(response);
-
-    }).fail(function (jqXHR, textStatus) {});
-}
-
-setInterval(function () {
-    getList();
-}, 1000);
-
-function refresh() {
-    $('#listnya').load(location.href + "#listnya");
-}
-
+<script>
+var notifId = [];
 function getList() {
     $.ajax({
         url: "/dashList2",
@@ -73,13 +75,39 @@ function getList() {
     }).fail(function (jqXHR, textStatus) {});
 }
 
+function cekNotif() {
+    $.ajax({
+        url: "/datanotif",
+        method: "GET",
+        dataType: "json"
+    }).done(function (response) {
+        $.each(response, function(key, item) {
+
+            if(typeof notifId[item['id']] == 'undefined'){
+                notifId[item['id']] = true;
+            }
+
+            $('#notifKegiatan').text(item['kegiatan']);
+            $('#notifKeterangan').text(item['keterangan']);
+            $('#notifTanggal').text(item['tanggal']);
+            $('#notifTempat').text(item['tempat']);
+            $('#notifDisposisi').text(item['disposisi']);
+
+            if(notifId[item['id']] == true){
+                $('#modal-notif').modal('show');
+                notifId[item['id']] = false;
+            }
+        });
+    }).fail(function (jqXHR, textStatus) {});
+}
+
 setInterval(function () {
-    getList();
+    cekNotif();
 }, 1000);
 
-function refresh() {
-    $('#listnya').load(location.href + "#listnya");
-}
+// function refresh() {
+//     $('#listnya').load(location.href + "#listnya");
+// }
 
 </script>
 

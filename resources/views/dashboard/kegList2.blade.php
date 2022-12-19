@@ -44,7 +44,7 @@
                     </a>
 
                     <script>
-$('#modale').modal('show');
+// $('#modale').modal('show');
                     </script> 
                     {{-- <audio autoplay>
                         <source src="floating.mp3" type="audio/mp3">
