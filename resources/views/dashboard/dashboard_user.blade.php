@@ -103,6 +103,7 @@ function cekNotif() {
 
 setInterval(function () {
     cekNotif();
+    getList();
 }, 1000);
 
 // function refresh() {
