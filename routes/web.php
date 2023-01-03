@@ -6,7 +6,7 @@ use App\Http\Controllers\controller_sppdkadin;
 use App\Http\Controllers\controller_rekening;
 use App\Http\Controllers\controller_nominatif;
 use App\Http\Controllers\controller_agenda;
-
+use App\Http\Controllers\controller_upload;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,9 +51,9 @@ Route::post('/agendaData', [controller_agenda::class,'getData']);
 Route::post('/agenUpdate/{id}', [controller_agenda::class,'update']);
 Route::get('/agenDelete{id}', [controller_agenda::class,'destroy']);
 //-------------------------DOKUMEN---------------------------------------------
-Route::get('/dok', function () {
-    return view('dokumen/dokumen');
-});
+Route::get('/dok', [controller_upload::class,'index']);
+Route::post('/upload', [controller_upload::class,'store']);
+
 Route::get('/dd', function () {
      return view('cc');
  });

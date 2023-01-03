@@ -16,14 +16,9 @@
             </tr>
         </thead>
         <tbody>
-            @php
-            $i=1
-
-            @endphp
-
             @foreach ($data as $peg)
             <tr>
-                <td>{{ $i++ }} </td>
+                <td>{{ $loop->iteration}} </td>
                 <td>{{ $peg->nama }}</td>
                 <td>{{ $peg->nip }}</td>
                 <td>{{ $peg->jabatan }}</td>

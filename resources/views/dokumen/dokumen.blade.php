@@ -15,23 +15,21 @@
                             <tr>
                                 <th>NO</th>
                                 <th>TAHUN</th>
-                                <th>NAMA DOKUMEN</th>
                                 <th>JENIS DOKUMEN</th>
-                                <th>DOWNLOAD</th>
+                                <th>NAMA DOKUMEN</th>
                                 <th>AKSI</th>
                             </tr>
                         </thead>
-                        <tbody>@php $i=1;
-
-                            @endphp <tr> 
-
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                        <tbody>
+                            @foreach ($data as $item)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->tahun }}</td>
+                                <td>{{ $item->jenis }}</td>
+                                <td>{{ $item->nama }}</td>
                                 <td></td>
                             </tr>
-
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -47,7 +45,7 @@
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <form id="ikitambah" action="" method="POST">
+                    <form id="ikitambah" action="{{ url('upload') }}" method="POST" enctype="multipart/form-data">
                         @csrf 
                         <div class="form-group row">              
                             <div class="col-md-4">
@@ -63,7 +61,7 @@
                             </div>
                             <div class="col">
                                 <label>JENIS DOKUMEN</label>
-                                <select name="tahun" class="form-control select2 select2-hidden-accessible"
+                                <select name="jenis" class="form-control select2 select2-hidden-accessible"
                                     style="width: 100%;" data-select2-id="2" tabindex="-2" aria-hidden="true">
                                    
                                     <option value="Perencanaan">Perencanaan</option>
@@ -74,7 +72,7 @@
                         </div>
                         <div class="form-group">
                             <label>NAMA DOKUMEN</label>
-                            <input type="text" name="nip"class="form-control" required>
+                            <input type="text" name="nama"class="form-control" required>
                                    
                     </div>
                                 
@@ -82,7 +80,7 @@
                     <div class="form-group">
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <input name ="filex" type="file" class="custom-file-input" id="exampleInputFile">
                             <label class="custom-file-label" for="exampleInputFile"></label>
                           </div>
                           <div class="input-group-append">
