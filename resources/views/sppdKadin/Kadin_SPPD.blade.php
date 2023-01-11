@@ -111,11 +111,12 @@
                         <div class="form-group col-md-6">
                             <label>PENGIKUT</label>
                             <select name="nama" class="form-control select2 select2-hidden-accessible"
-                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                <option value="MADA BAYU AJI">MADA BAYU AJI</option>
-                                @foreach ($nominatif as $peg )
-                                <option value="{{ $peg->nama }}">{{ $peg->nama }}</option>
+                                style="width: 100%;" data-select2-id="10" tabindex="-10" aria-hidden="true">
+                                <option value="MADA BAYU AJI" required>MADA BAYU AJI</option>
+                                @foreach ($nominatif as $nana)
+                                <option value="{{ $nana->nama }}">{{ $nana->nama }}</option>
                                 @endforeach
+                                
                             </select>
                         </div>
                         <div class="form-group col-md-6">
@@ -133,7 +134,7 @@
                         <div class="form-group col-md-6">
                             <label>KENDARAAN</label>
                             <select name="kendaraan" class="form-control select2 select2-hidden-accessible"
-                                style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                style="width: 100%;" data-select2-id="2" tabindex="-2" aria-hidden="true">
                                 <option value="" required>-Pilih Kendaraan-</option>
                                 <option value="Kendaraan Dinas (Roda Empat)">Kendaraan Dinas (Roda Empat)</option>
                                 <option value="Kendaraan Dinas (Roda Dua)">Kendaraan Dinas (Roda Dua)</option>
@@ -200,7 +201,7 @@
                     @csrf
                     <div class="form-row">             
                         <div class="form-group col-md-12">
-                            <textarea name="angaran" class="form-control"></textarea>
+                            <textarea name="angaran" class="form-control" required></textarea>
                         </div>
                         <div class="col">
                             <label></label>

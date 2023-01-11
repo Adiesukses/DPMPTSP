@@ -55,5 +55,5 @@ Route::get('/dok', [controller_upload::class,'index']);
 Route::post('/upload', [controller_upload::class,'store']);
 
 Route::get('/dd', function () {
-     return view('cc');
+     return view('layout/home2');
  });

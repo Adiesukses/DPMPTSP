@@ -27,7 +27,17 @@
                                 <td>{{ $item->tahun }}</td>
                                 <td>{{ $item->jenis }}</td>
                                 <td>{{ $item->nama }}</td>
-                                <td></td>
+                                <td >
+                                    <a class="btn btn-info btn-sm " href="#">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" onclick="return confirm ('Yakin Bro?')"
+                                        href="">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
