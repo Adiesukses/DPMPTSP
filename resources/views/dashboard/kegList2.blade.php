@@ -9,7 +9,6 @@
                 <th>WAKTU</th>
                 <th>KETERANGAN</th>
                 <th>DISPOSISI</th>
-                <th>STATUS</th>
             </tr>
         </thead>
         <tbody>
@@ -30,33 +29,7 @@
                 <td>{{ $keg->waktu}} WIB</td>
                 <td>{{ $keg->keterangan }}</td>
                 <td>{{ $keg->disposisi }}</td>
-                  <td>@php                     
-                    $firstDate = Carbon\Carbon::parse('today');
-                    $secondDate = Carbon\Carbon::parse($keg->tanggal);
-                    $time1 = now();
-                    $time2 = Carbon\Carbon::createFromTimeString($keg->waktu);
-                    @endphp
-                    @if($secondDate ->eq($firstDate) && $time1 ->gte($time2))
-                        <a class="btn btn-info btn-sm">
-                        <i class="fas fa-flag">
-                        </i>
-                        Aktif
-                    </a>
 
-                    <script>
-// $('#modale').modal('show');
-                    </script> 
-                    {{-- <audio autoplay>
-                        <source src="floating.mp3" type="audio/mp3">
-                    </audio> --}}
-                    @else 
-                            <a class="btn btn-secondary btn-sm">
-                            <i class="fas fa-flag">
-                            </i>
-                            Otewe
-                        </a>
-                    @endif
-              </td>  
 </tr>  
          @endforeach
                 
