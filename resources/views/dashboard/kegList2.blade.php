@@ -1,14 +1,14 @@
 <div class="table-responsive" >
     <table class="table m-0"id="list_keg2">
         <thead>
-            <tr>
-                <th>NO</th>
-                <th>ACARA/KEGIATAN</th>
-                <th>TANGGAL</th>
-                <th>TEMPAT</th>
-                <th>WAKTU</th>
-                <th>KETERANGAN</th>
-                <th>DISPOSISI KASUBAG UMUM</th>
+            <tr >
+                <th >NO</th>
+                <th >ACARA/KEGIATAN</th>
+                <th >TANGGAL</th>
+                <th >TEMPAT</th>
+                <th >WAKTU</th>
+                <th >KETERANGAN</th>
+                <th >DISPOSISI KASUBAG UMUM</th>
             </tr>
         </thead>
         <tbody>
