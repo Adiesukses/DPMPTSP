@@ -280,20 +280,21 @@
                     </div>
                     <div class="form-group row">
                         <div class="form-group col-md-12">
-                            <label>DISPOSISI</label>
-                            <select name="disposisi" class="form-control select2 select2-hidden-accessible"
+                            <label>DISPOSISI KASUBAG UMUM</label>
+                            <textarea name="disposisi" class="form-control" required></textarea>
+                            {{-- <select name="disposisi" class="form-control select2 select2-hidden-accessible"
                                 style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" placeholder="Pilih" required>
-                                <option>Kasubbag Umum</option>
-                                <option>Kasubbag Umum & Staff Perencanaan</option>
-                                <option>Kasubbag Umum & Staff Kepegawaian </option>
-                                <option>Kasubbag Umum & Bendahara </option>
-                                <option>Bendahara</option>
-                                <option>Bendahara & Pembantu Bendahara</option>
-                                <option>Pembantu Bendahara</option>
-                                <option>Staff Staff Perencanaan</option>
-                                <option>Staff Kepegawaian</option>
-                                <option>Arsiparis</option>
-                            </select>
+                                <option>Isma Ertanti,SE</option>
+                                <option>Guntur Setiyawan, Spd</option>
+                                <option>Heru Sutarno </option>
+                                <option>Nobita, SAB </option>
+                                <option>Adi Setiyawan, Amd</option>
+                                <option>Rio Nuari, Amd</option>
+                                <option>Isma Ertanti,SE & Guntur Setiyawan, Spd</option>
+                                <option>Isma Ertanti,SE & Adi Setiyawan, Amd</option>
+                                <option>Isma Ertanti,SE & Nobita, SAB</option>
+                                <option>Isma Ertanti,SE & Rio Nuari, Amd</option>
+                            </select> --}}
                         </div>
                     </div>
                     <div class="form-group row">
