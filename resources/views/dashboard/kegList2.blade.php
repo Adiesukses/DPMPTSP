@@ -8,7 +8,7 @@
                 <th >TEMPAT</th>
                 <th >WAKTU</th>
                 <th >KETERANGAN</th>
-                <th >DISPOSISI KASUBAG UMUM</th>
+                <th >DISPOSISI </th>
             </tr>
         </thead>
         <tbody>
