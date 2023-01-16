@@ -2,13 +2,13 @@
     <table class="table m-0"id="list_keg2">
         <thead>
             <tr >
-                <th >NO</th>
-                <th >ACARA/KEGIATAN</th>
-                <th >TANGGAL</th>
-                <th >TEMPAT</th>
-                <th >WAKTU</th>
-                <th >KETERANGAN</th>
-                <th >DISPOSISI </th>
+                <th><h3>NO</h3></th>
+                <th ><h3>ACARA/KEGIATAN</h3></th>
+                <th ><h3>TANGGAL</h3></th>
+                <th ><h3>TEMPAT</h3></th>
+                <th ><h3>WAKTU</h3></th>
+                <th ><h3>KETERANGAN</h3></th>
+                <th ><h4>DISPOSISI KASUBBAG UMUM</h4></th>
             </tr>
         </thead>
         <tbody>
@@ -16,19 +16,19 @@
             $i=1;
 
             @endphp
-            <tr>
+            <tr >
                 @foreach ($data as $keg)
-                <td>{{ $i++ }}</td>
-                <td>{{ $keg->kegiatan }}</td>
+                <td><h4>{{ $i++ }}</h4></td>
+                <td ><h4>{{ $keg->kegiatan }}</h4></td>
                 @php 
                 $today = Carbon\Carbon::parse($keg->tanggal)->isoFormat('dddd, D MMMM Y');@endphp
-                <td>{{ $today}} </td>
+                <td ><h4>{{ $today}} </h4></td>
                 {{-- {{ date('l, d F Y',strtotime($keg->tanggal)) }}  --}}
 
-                <td >{{ $keg->tempat }}</td>
-                <td>{{ $keg->waktu}} WIB</td>
-                <td>{{ $keg->keterangan }}</td>
-                <td>{{ $keg->disposisi }}</td>
+                <td ><h4>{{ $keg->tempat }}</h4></td>
+                <td><h4>{{ $keg->waktu}} WIB</h4></td>
+                <td ><h4>{{ $keg->keterangan }}</h4></td>
+                <td><h4>{{ $keg->disposisi }}</h4></td>
 
 </tr>  
          @endforeach
