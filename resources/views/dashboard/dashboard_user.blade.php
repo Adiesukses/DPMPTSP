@@ -48,11 +48,11 @@
           </button>
         </div>
         <div class="modal-body">
-          Nama Kegiatan : <br><h4><span id="notifKegiatan"></span></h4><br>
-          Tanggal Kegiatan : <br><h4><span id="notifTanggal"></span></h4><br>
-          Waktu: <br><h4><span id="notifWaktu"></span> WIB</h4></br>
-          Tempat : <br><h4><span id="notifTempat"></span></h4><br>
-          Disposisi Kasubbag Umum: <br><h4><span id="notifDisposisi"></span></h4></br>
+          <strong>Nama Kegiatan : </strong><br>
+          <h4><span id="notifKegiatan"></span></h4>
+          <strong>Waktu: </strong><br><h4><span id="notifWaktu"></span> WIB</h4>
+          <strong>Tempat : </strong><br><h4><span id="notifTempat"></span></h4>
+          <strong>Disposisi Kasubbag Umum: </strong><br><h4><span id="notifDisposisi"></span></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
