@@ -57,3 +57,6 @@ Route::post('/upload', [controller_upload::class,'store']);
 Route::get('/dd', function () {
      return view('layout/home2');
  });
+ Route::get('/cb', function () {
+    return view('dashboard/dashboard_user2');
+});
